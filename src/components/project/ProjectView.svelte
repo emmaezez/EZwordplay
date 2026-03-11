@@ -1192,7 +1192,7 @@
             }
         }
         // Source? Cycle through source, expanding as necessary.
-        else if (currentTileIndex) {
+        else if (currentTileIndex >= 0) {
             const sources = layout.getSources();
             const index = sources.findIndex(
                 (source) => source.id === currentTile.id,
