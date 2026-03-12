@@ -4000,1381 +4000,1713 @@
             "title": "回调",
             "performance": ["use", "fit", "DarkVoid"],
             "scenes": [
-                {
-                    "title": "记忆",
-                    "subtitle": null,
-                    "performance": ["use", "fit", "Symbol", "💭"],
-                    "lines": [
-                        ["FunctionDefinition", "curious", "…"],
-                        null,
-                        ["use", "fit", "Symbol", "🤯"],
-                        [
-                            "FunctionDefinition",
-                            "neutral",
-                            "有时候，我只需要停下来，思考一下我的小社区是多么不可思议。我们每个人都如此不同，单靠我们其中任何一个人都无法完成表演。但在一起，我们可以创造出如此惊人的事情！"
-                        ],
-                        null,
-                        ["use", "fit", "Symbol", "🧠"],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "但似乎无论我们有多么了不起，我们总是会忘记，并最终重复自己。因此，我还想介绍给你另一组人。 它们是我们*记住*的方式，也是我们组织记忆的方式。 没有了它们，我们的工作中很多事情都必须一遍又一遍地做，我们就将永远无法上演最令人兴奋的表演了！"
-                        ]
-                    ]
-                },
-                {
-                    "title": "命名",
-                    "subtitle": "联结",
-                    "concept": "Bind",
-                    "performance": ["use", "fit", "Symbol", ":"],
-                    "lines": [
-                        ["fit", "Phrase(':' rotation: 90°)"],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "@Bind？这有一个人我想要介绍给你。"
-                        ],
-                        [
-                            "Bind",
-                            "curious",
-                            "@FunctionDefinition？哇，真的是你。已经很久没有声音了。你的朋友是谁？"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Phrase(':' resting:Pose(scale: 10ms ÷ Time()))"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "它们是我们的新导演！它们来这里是为了用新的想法，新的表达方式激励我们。"
-                        ],
-                        [
-                            "Bind",
-                            "excited",
-                            "真的吗？那太棒了。我很久没得到灵感了。我感觉自己一直在等待……"
-                        ],
-                        null,
-                        [
-                            "fix",
-                            "Phrase(':' 10m resting:Sequence(bounce(3m) 1s))"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "既然你知道了，现在你最想做什么？"
-                        ],
-                        [
-                            "Bind",
-                            "serious",
-                            "给事物命名。给一切命名！给每个人命名。我很久没给什么东西命名了。"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "我还没有向我们的灵感伙伴提到名字的事情，除了我们遇到的所有角色的名字之外。你想解释一下这里的名字是如何运作的吗？"
-                        ],
-                        null,
-                        ["use", "fit", "Symbol", ":"],
-                        [
-                            "Bind",
-                            "excited",
-                            "当然！所以名称……你知道每个表达式都会产生一个值吗？"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我们谈论过值！像 @Number、@Text、@None、@List、@Set、@Map 这样的值……"
-                        ],
-                        [
-                            "Bind",
-                            "excited",
-                            "对！就像，值，当我们制造它们时，它们就会被我们传递，就像一个球，从表达式传递到表达式，直到 @Program 制作最后给 @Stage 显示的值。 但有时，与其传递一个值，不如将其放在一边，保存到以后的某个表达式中。这就是 @Phrase/name 的用途。 我命名事物，这样我们以后就可以使用它们。"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "serious",
-                            "所以这里有一个非常简单的例子。假设我们想命名一个数字。我们只需说出名称，然后是：，然后是我们想要的数字。简单吧？现在，每当我们在表达式中使用该名称时，它将求值为 \\1\\。就像这里，我们在这里命名它，然后使用它的名称将值传递给 @Program。"
-                        ],
-                        ["edit", "number: 1", "number"],
-                        null,
-                        [
-                            "Bind",
-                            "serious",
-                            "而且，你可以通过使用 \\•\\ 符号为我指定类型，告诉我该名称应该是什么类型的值。 所以，如果你想确保数字是一个数字，你会这样说。那就是说，以名称 \\数字\\ 命名值，并且该值必须是 @Number。"
-                        ],
-                        ["edit", "number•#: 1", "number"],
-                        null,
-                        [
-                            "Bind",
-                            "eager",
-                            "但是，如果你给我一个不是数字的东西怎么办？那我会抱怨，因为你说它应该是一个数字，但是你给我了一些文本。所以我不知道该怎么办。明白了吗？"
-                        ],
-                        ["conflict", "number•#: 'oh hi'", "number"],
-                        null,
-                        [
-                            "Bind",
-                            "serious",
-                            "但好吧，到现在为止，你一定在想，*为什么有人会这样命名一个数字或文本呢？？？*好吧，想象一下，如果你正在听 @Key，并且想知道它是否是一组秘密字母之一，并显示一个 @Phrase，其中包含一个大的 \\⊤\\（如果它是一个魔术信件），以及小的 \\⊥\\（如果不是）。我们可能从这里开始。 这让我们得到了 \\⊤\\ 或 \\⊥\\。这是伟大的，当你按下其中一个字母时，你会得到 \\⊤\\，当你按下其他字母时，你会得到 \\⊥\\。很好。"
-                        ],
-                        ["edit", "[ 'a' 'e' 'i' 'o' 'u'].has(Key())"],
-                        null,
-                        [
-                            "Bind",
-                            "serious",
-                            "现在，让我们制作短语。我们将 @List/has 表达式放入文本中并将其转换为文本。现在我们得到了 @Phrase 在舞台上，就像 \\⊤\\ 或 \\⊥\\ 一样。很好！"
-                        ],
-                        [
-                            "edit",
-                            "Phrase([ 'a' 'e' 'i' 'o' 'u'].has(Key())→'')"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "curious",
-                            "现在问题来了。我们如何更改 @Phrase 的大小呢？好吧，我们已经弄清楚如何检查它是否是一个魔术字母，所以我们可以简单地复制它，如果它是 \\⊤\\，那么将其大小设置为 \\2m\\，否则如果它是 \\⊥\\，将其大小设置为 \\1m\\。这有效，但是你看到我们不得不两次评估相同的表达式了吗？"
-                        ],
-                        [
-                            "edit",
-                            "Phrase(",
-                            "   [ 'a' 'e' 'i' 'o' 'u' ].has(Key())→''",
-                            "   [ 'a' 'e' 'i' 'o' 'u' ].has(Key()) ? 2m 1m",
-                            ")"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "excited",
-                            "这就是我要出场的地方了！看，你可以只评估表达式并为结果命名值。神奇吧？你只需在表达式前放置名称和 \\:\\，该表达式的值就会有一个名称。然后，你可以在该表达式之后的任何地方use该名称来引用其值。奇怪吧？你想看看它是如何工作的吗？尝试按下时间轴上的 ← 并向后移动几步，直到首次命名魔术。看看 \\magic\\ 如何获得 \\has\\ 的值？然后看看每个地方 \\magic\\ 被名称引用，相同的值被放置了？"
-                        ],
-                        [
-                            "edit",
-                            "magic: [ 'a' 'e' 'i' 'o' 'u'].has(Key())",
-                            "Phrase(",
-                            "    magic→''",
-                            "    magic ? 2m 1m",
-                            ")"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "serious",
-                            "你知道，你可以总是只复制你写下的那些表达式。但那将是同样的表演。这有点浪费。我的意思是，我们不得不一遍又一遍地创建完全相同的值，然后如果你对某个表达式改变了主意，你就得在所有地方都修改它。而且，如果你在一个地方更改了想法，但忘记在其他地方更改呢？比如，想象一下如果你还想通过这个来改变颜色，所以你有三次相同的表达式。然后想象一下，如果你想使用此操作向我们的魔术字母列表添加一个字母。你就必须这样做三次！你有可能会忘记其中一个，或者打错字。如果我们有人没有按你的意愿执行，你应该如何表达你的艺术愿景呢？"
-                        ],
-                        [
-                            "edit",
-                            "Phrase(",
-                            "    [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key())→''",
-                            "    [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key()) ? 2m 1m",
-                            "    color: Color(50% 100 [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key()) ? 180° 0°)",
-                            ")"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "kind",
-                            "但是，如果你为表达式命名，你只需执行一次。看看这有多容易阅读。"
-                        ],
-                        [
-                            "edit",
-                            "magic: [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key())",
-                            "Phrase(",
-                            "    magic→''",
-                            "    magic ? 2m 1m",
-                            "    color: Color(50% 100 magic ? 180° 0°)",
-                            ")"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "@Bind，那是一个很好的例子！你知道我喜欢名称。我很好奇，名称是否也会出现一些问题？"
-                        ],
-                        [
-                            "Bind",
-                            "sad",
-                            "是的，嗯，确实有些问题。比如，假设我们这样做了。看到问题了吗？我已经标出了。这段程序在使用\\蔬菜\\之后才定义它，这让我感到很困惑。因为程序是按照读取顺序来执行的，所以我们在阅读这个程序时，遇到了\\蔬菜\\这个词, 我们就会想，谁是 \\蔬菜\\？直到最后，\\蔬菜\\才跳出来说“我在这!”然后整个节目就崩塌了。"
-                        ],
-                        [
-                            "conflict",
-                            "水果: 5",
-                            "总计: 水果 + 蔬菜",
-                            "蔬菜: 3",
-                            "总计"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "serious",
-                            "或者，就像这里的一个例子，我们给两个不同的值起了相同的名字。所以我们评估 \\5\\，并将其命名为 \\水果\\，然后我们评估 \\10\\…然后我们将其命名为 \\水果\\?? 就像，已经有一个 \\水果\\，所以你说的是哪个 \\水果\\？因为一旦你给一个值起了名字，你就不能给它一个新的值。那个名字和值将在 @Program 完成评估之前绑定在一起。我们不希望有人对谁是谁感到困惑。"
-                        ],
-                        [
-                            "conflict",
-                            "水果: 5",
-                            "水果: 10",
-                            "总计: 水果 + 水果",
-                            "总计"
-                        ],
-                        null,
-                        [
-                            "Bind",
-                            "kind",
-                            "我想最后还有一个。假设你有这个。看这里发生了什么？我们命名了 \\蔬菜\\，但是我们从未使用过它。这通常是一个坏迹象，表明你漏掉了某个人，或者没有使用正确的名字。比如，也许你只是没有想要使用它，那为什么它在这里呢？"
-                        ],
-                        ["conflict", "水果: 5", "蔬菜: 10", "水果 + 3"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "neutral",
-                            "这真的太有用了，@Bind，太棒了。你确定没有其他东西了吗？"
-                        ],
-                        [
-                            "Bind",
-                            "eager",
-                            "噢！对了，有一件非常重要的事情。就像，一个名字很好，对吧？但有时，多个名字更好？比如，如果你想用多种语言命名某样东西，这样每个人都能读懂？就像，比如你想用多种语言说水果。",
-                            "将文本光标放在 \\水果\\ 的名称上。看到里面实际上有三个名称，它们每个都有一个类似于 \\/en\\ 的两个字母的标签？如果名称处于你没有选择的语言中，名称将隐藏。",
-                            "转到⚙，选择例如西班牙语，然后你会看到英语和西班牙语的名称。就像，一个值，但有三个名称，你可以使用其中任何一个来获取该值。如果你告诉我们你想要那种语言，我们就会显示可用相关的语言。语言越多越好，因为世界上有很多人阅读很多不同的语言！"
-                        ],
-                        ["conflict", "fruit/en,fruta/es,水果/zh: 5"],
-                        null,
-                        ["use", "fit", "Symbol", ":"],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "你知道，@Bind 与许多其他字符一起使用，包括 @Evaluate — 当你给 @FunctionDefinition 输入一个 @Pose (color: _) 时就会看到它们 — 我们将还要遇到其他的一些人。@Bind，你会在这里进行演示吗？"
-                        ],
-                        [
-                            "Bind",
-                            "excited",
-                            "嗯，是的！现在沉默被打破了，让我们整天都给值命名吧！"
-                        ]
-                    ]
-                },
-                {
-                    "title": "台下",
-                    "subtitle": "块",
-                    "concept": "Block",
-                    "performance": ["use", "fit", "Symbol", "()"],
-                    "lines": [
-                        ["fix", "Phrase('()' 1m)"],
-                        [
-                            "FunctionDefinition",
-                            "neutral",
-                            "所以有一个角色一直在这里，但你还没有见过，但它们一直在躲藏……它们与 @Bind 和许多其它人密切合作，所以我想我们应该接下来与它们交谈。@Block，你能出来吗？"
-                        ],
-                        ["Block", "shy", "… 你好"],
-                        null,
-                        ["fix", "Phrase('()' 2m)"],
-                        ["FunctionDefinition", "kind", "嗨 @Block！ 你好吗？"],
-                        ["Block", "shy", "… 嗯，还行？"],
-                        null,
-                        ["fix", "Phrase('()' 3m)"],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我有一个新朋友要让你见见。 它们可能是我们的下一位导演。"
-                        ],
-                        ["Block", "shy", "… 嗨 …"],
-                        null,
-                        ["fix", "Phrase('()' 4m)"],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我们刚刚见到了 @Bind，但还没来得及谈谈你们两个是如何成为最好的朋友的！"
-                        ],
-                        ["Block", "shy", "… 是的，@Bind！"],
-                        null,
-                        ["fix", "Phrase('()' 1m)"],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "你想分享一下你们一起是做什么吗？"
-                        ],
-                        ["Block", "shy", "… 你能吗？"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "好呀，当然可以！原来 @Program 主要就是一个 @Block。 它就是没有括号的 @Block。 但是你可以在程序的任何地方使用带有括号的 @Block。 例如，你可以使用 @Block 来澄清数学计算的顺序。 这里，@BinaryEvaluate 评估 \\1\\，然后评估 @Block，然后它们相加。 @Block，我说得对吗？"
-                        ],
-                        ["edit", "1 + (2 · 3)"],
-                        ["Block", "shy", "… 对的！"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "@Block 还可以做另一件你已经看过的事情。 @Block 允许你用 @Bind 命名事物。 但是在 @Block 中定义的任何名称只在括号之间定义。 不在之前，也不在之后。 例如，看看这个。 \\a\\ 被定义为 \\1\\，然后开始一个块，\\b\\ 被定义为 \\2\\，然后 \\c\\ 被定义为它们的总和。 @Block 的结果是它表达式列表中最后一个值的结果。也就是说@Bind 的结果是变量 \\c\\ 的值，而 \\c\\ 是\\3\\。 对吧？"
-                        ],
-                        ["conflict", "a: 1", "(", "  b: 2", "  c: a + b", ")"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "serious",
-                            "但是如果我们想在 @Block 外部访问 \\c\\ 怎么办？你不能这样做。 \\c\\ 只在 @Block 内部定义，而不在外部定义。 @Block，对吗？"
-                        ],
-                        [
-                            "conflict",
-                            "a: 1",
-                            "(",
-                            "  b: 2",
-                            "  c: a + b",
-                            ") + c"
-                        ],
-                        [
-                            "Block",
-                            "shy",
-                            "… 是的，我外面什么都看不到。 \\c\\ 只在我的内部存在"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "neutral",
-                            "还有一件事，我想？由于 @Block 是一个表达式列表，它只评估为列表中最后一个表达式，列表中的任何不是 @Bind 的表达式基本上都会被忽略。 例如，在这里，最后一个之前的所有算术都被忽略。 \\3\\、\\5\\、\\7\\，全部被忽略，@Block 只评估为最后一个 \\9\\。 我说的对吗，@Block？"
-                        ],
-                        [
-                            "Block",
-                            "shy",
-                            "… 嗯。只有最后一个。其他的… 我不知道它们是做什么用的！！"
-                        ],
-                        [
-                            "conflict",
-                            "(",
-                            "  1 + 2",
-                            "  2 + 3",
-                            "  3 + 4",
-                            "  4 + 5",
-                            ")"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Phrase('()' resting:Sequence(spin() 1s 'straight'))"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "还有其他你想分享的吗，@Block？"
-                        ],
-                        [
-                            "Block",
-                            "curious",
-                            "… 我们可以做点什么吗？我能帮忙吗？"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我也很好奇！但我相信我们的导演会在适当的时候决定。 灵感总是在最意想不到的时候出现！"
-                        ]
-                    ]
-                },
-                {
-                    "title": "舞台指示",
-                    "subtitle": "函数",
-                    "concept": "FunctionDefinition",
-                    "performance": ["use", "fit", "Symbol", "ƒ"],
-                    "lines": [
-                        ["use", "fit", "Symbol", "☺️"],
-                        [
-                            "FunctionDefinition",
-                            "happy",
-                            "我很高兴我们找到了每个人，并且你已经见过它们。每个人都很不同，不是吗？但也都很有趣？我觉得我们就像一个家庭，每个人都有自己独特的方式，但我们的差异使我们强大。你觉得大家怎么样？"
-                        ],
-                        null,
-                        ["use", "fit", "Symbol", "🙈"],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "我？嗯，我没什么特别的。我只是喜欢在幕后工作，帮助大家，展示它们的特别之处。我猜我甚至没想过要谈谈自己。我想我们可以聊聊我。"
-                        ],
-                        null,
-                        ["use", "fit", "Symbol", "ƒ"],
-                        [
-                            "FunctionDefinition",
-                            "serious",
-                            "我想我们就从你已经看到的开始说起吧。你知道每个值都有不同的函数可以在它们上面评估吗？比如数字知道如何 @Number/add，一个文本值知道如何检查它是否包含 @Text/has 一些文本，或者 @Set 知道如何检查它是否有某个值？好吧，我就是定义这些函数的人。我的意思是，我没有灵感自己创造它们—那是像你这样的导演做的事—但我定义了函数接受的输入、它们的名字，以及使用输入评估为输出值的表达式。"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "这是一个非常简单的例子。实际上是最简单的！这定义了一个总是评估为数字 \\1\\ 的函数。就这样。它不是很有用，不是吗？它没有名字，不接受输入，总是评估为 \\1\\。",
-                            "你也可以看到 @Program 评估为我的一个，一个 @FunctionDefinition。没错，@FunctionDefinition 也是值！我不知道为什么有人会制作这样一个无用的函数，但正如我所说，我没有灵感，那是你的工作。"
-                        ],
-                        ["edit", "ƒ() 1"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "serious",
-                            "这里有一个更实用的例子。你知道奇数和偶数吗？我曾经遇到一位导演，它想检查一个数字是否是偶数（能被2整除，我想这就是意思？），于是他们写了这个。这个函数叫做 \\偶数\\，它接受一个叫做… \\数字\\ 的单一数字。你需要告诉我每个输入是什么类型的值，这样 @Evaluate 可以确保任何评估函数的东西都发送正确类型的值。然后，它接受数字，除以二，得到余数（用 @Number/remainder ），然后用 @Number/equal 检查余数是否等于 \\0\\。因此整个函数最终要么评估为 \\⊤\\ 要么评估为 \\⊥\\。例如，这个偶数的评估结果是 \\⊥\\ 因为 \\3\\ 是奇数。试试使用回退按钮看看它是如何工作的。"
-                        ],
-                        [
-                            "edit",
-                            "ƒ even(number•#) (number % 2) = 0",
-                            "even(3)"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "eager",
-                            "你也可以告诉我我应该评估哪种类型的值。看到我们在输入列表后添加了 \\•\\吗？这表示“函数的表达式应该评估为 \\⊤\\ 或 \\⊥\\。”但看到我们对此的抱怨了吗？我们不知道函数应该是 \\⊤\\ 还是 \\⊥\\ 或者你返回的任何类型的值，所以表演就结束了。"
-                        ],
-                        ["conflict", "ƒ even(number•#)•? (number % 2) + 0"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "serious",
-                            "函数可以像你想要的那样复杂。你可以使用简单的表达式或 @Block，甚至可以在函数内部创建函数。例如，看看这个前任导演写的函数。他使用 @Block 和许多 @Bind 来计算一个单词中有多少个独特的元音。（我想他们试图确定一个单词是否“复杂”或类似的东西）。看到它有很多行？嗯，这仍然只有一个表达式：一个单一的 @Block，而 @Block 有所有的行。像任何 @Block 一样，最后一行是它评估的结果：独特元音的总数。其他所有的—比如第一行，把文本转换成字母列表，然后把字母列表转换成集合—只是为了在中间求和这些计数的准备。"
-                        ],
-                        [
-                            "edit",
-                            "ƒ vowels(word•'') (",
-                            "  unique: word → [“”] → {}",
-                            "  a: unique{'a'} ? 1 0",
-                            "  e: unique{'e'} ? 1 0",
-                            "  i: unique{'i'} ? 1 0",
-                            "  o: unique{'o'} ? 1 0",
-                            "  u: unique{'u'} ? 1 0",
-                            "  a + e + i + o + u",
-                            ")",
-                            "vowels('hello')"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "serious",
-                            "还有一件事要展示。我想这很重要，因为每个人都对此感到兴奋！你知道你可以创建一个函数然后评估它吗？因为我创建的函数是值，你也可以将它们作为输入传递给另一个函数。这里有一个例子。假设你有一个数字列表，只想要其中的偶数。@List 有一个叫做 @List/filter 的函数，它接受一个函数作为输入，并在列表中的每个值上使用该函数来决定是否保留它。让我们创建一个数字列表，并给 @List/filter 我们之前创建的 \\偶数\\ 函数作为输入。看看会发生什么？我们只得到了偶数。想试试把它改成给出奇数吗？也许尝试以某种方式改变函数？"
-                        ],
-                        [
-                            "edit",
-                            "ƒ even(number•#)•? (number % 2) = 0",
-                            "[ 1 2 3 4 5 6 7 8 ].filter(even)"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "有很多函数可以将其他函数作为输入。@List 有这样的函数，@Set 有这样的函数，@Map 有这样的函数。你甚至可以自己创建这样的函数！"
-                        ],
-                        [
-                            "fit",
-                            "Group(Grid(3 2) [Phrase('翻译') Phrase('过滤') Phrase('组合') Phrase('查找') Phrase('排序') Phrase('直到')])"
-                        ],
-                        null,
-                        ["use", "fit", "DarkVoid"],
-                        [
-                            "FunctionDefinition",
-                            "sad",
-                            "我不知道。有时，我明白为什么人们说它们对我所做的事情感激不尽。其他时候，我觉得真正的魔力在于像你这样的导演。这让我有时觉得我只是人们光辉的空壳……"
-                        ]
-                    ]
-                },
-                {
-                    "title": "布景设计",
-                    "subtitle": "结构",
-                    "concept": "StructureDefinition",
-                    "performance": ["use", "fit", "Symbol", "•"],
-                    "lines": [
-                        ["use", "fit", "DarkVoid"],
-                        [
-                            "FunctionDefinition",
-                            "sad",
-                            "还有一些角色我想让你见见。接下来是我认识的最复杂的角色，也算是一种领导者。它们帮助组织我们所有人，奠定表演的基础，真的让一切都变得更有秩序。当然，你是我们的导演，但它们有点像每个人都去找以保持秩序的人。我认为在你上演的任何节目中，它们可能非常重要。"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Phrase('•' resting:Sequence({0%: Pose(scale: 1) 50%: Pose(scale: 1.2) 100%: Pose(scale: 1)} 3s))"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "@StructureDefinition，你在吗？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "curious",
-                            "@FunctionDefinition … 朋友。一切都很安静呢？大家都去哪了？"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "sad",
-                            "寂静。它影响到了我们所有人。大家都还好，我几乎找到了所有人。但对一些人来说，这段时间很艰难。你过得怎么样？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "sad",
-                            "… 你的朋友是谁？那是人吗？"
-                        ],
-                        [
-                            "fit",
-                            "Phrase('•' resting:Sequence({0%: Pose(offset: Place(-0.25m)) 50%: Pose(offset: Place(0.25m)) 100%: Pose(offset: Place(-0.25m))} 3s))"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "eager",
-                            "哦，是的，抱歉，这是我们的新导演！它们来激励和引导我们，分享它们的故事、想法和想象。它们打破了寂静！"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "eager",
-                            "真是令人难以置信。也是一种解脱。很高兴见到你，导演。我在这里，随时为你效劳。",
-                            "@FunctionDefinition … 情况很艰难。你，@Evaluate，每个人真的—我都没有意识到我有多依赖你们人。有了目的，有了玩耍的机会，有了社区。我不知道我们会失去对方。没有人组织，我感觉只能组织自己，这感觉毫无意义。"
-                        ],
-                        [
-                            "fit",
-                            "Phrase('•' resting:Sequence({0%: Pose(rotation: 0°) 80%: Pose(rotation: 15°) 100%: Pose(rotation: 0°)} 3s))"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "@StructureDefinition，即使你独自一人，你也永远不会是空的。即使我们不能在一起，我们都在这里。现在寂静被打破了，我们可以在一起了。"
-                        ],
-                        ["StructureDefinition", "happy", "我们可以，是吧？"],
-                        [
-                            "fit",
-                            "Phrase('•' resting:Sequence({0%: Pose(offset: Place(0m 0.25m)) 50%: Pose(offset: Place(0m 0m)) 100%: Pose(offset: Place(0m 0.25m))} 3s))"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "你认为呢，你准备好与大家团聚了吗？为我们的新导演上演任何表演？"
-                        ],
-                        ["StructureDefinition", "eager", "我想是的。"],
-                        [
-                            "fit",
-                            "Phrase('•' resting:Sequence({0%: Pose(offset: Place(0m 0.25m)) 50%: Pose(offset: Place(0m 0m)) 100%: Pose(offset: Place(0m 0.25m))} 1.5s))"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "你觉得你能帮助我们的导演更多地了解你是做什么的吗？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "shy",
-                            "好的。好的……在寂静中，我有很多时间思考我的目的。我猜我意识到我真正做的是赋予一群事物身份。例如，我知道你见过 ƒ，但你见过 @Bind 吗？"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "是的！我们刚刚见过 @Bind 和 @Block。"
-                        ],
-                        [
-                            "fix",
-                            "Phrase('•' entering: Pose(scale: 0.5) resting:Pose(scale: 2))"
-                        ],
-                        null,
-                        [
-                            "StructureDefinition",
-                            "eager",
-                            "好的。我所做的是将值和函数聚集在一起，为一堆相关的事物创建一个整洁的容器。例如，想象一下，你想制作一个小型的跑马灯，循环显示一系列消息。以前的导演制作了一个，并希望这些消息显示出来。"
-                        ],
-                        [
-                            "edit",
-                            "[",
-                            "  'Kitties are cute!'",
-                            "  'Got cat?'",
-                            "  'Cat mom.'",
-                            "  'Tuxie crush'",
-                            "  'Lap cat'",
-                            "]"
-                        ],
-                        null,
-                        [
-                            "StructureDefinition",
-                            "serious",
-                            "然后它们遇到了一个问题，表演如何记住它们在哪条消息上。它们意识到它们需要一种在索引到达末尾时记住消息索引的方法。这是一个好的开始，但它只显示第一条消息。"
-                        ],
-                        [
-                            "edit",
-                            "messages: [",
-                            "    'Kitties are cute!'",
-                            "    'Got cat?'",
-                            "    'Cat mom.'",
-                            "    'Tuxie crush'",
-                            "    'Lap cat'",
-                            "  ]",
-                            "index: 1",
-                            "Phrase(messages[index])"
-                        ],
-                        null,
-                        [
-                            "StructureDefinition",
-                            "excited",
-                            "然后它们想到了 @Reaction，可以用来响应流的变化。它们希望每两个部分更改一次消息，所以它们制作了一个 @Time 流，每隔 2 秒进行一次刻度，并使用 @Reaction 来每次递增下一个索引。这个 @Reaction 表示从 \\1\\ 开始，当时间每 \\2000ms\\ 更改一次时，评估为 \\index + 1\\ 的前一个值。这样，\\index\\ 每两秒增加 \\1\\，改变显示的消息。太棒了，它起作用了！"
-                        ],
-                        [
-                            "edit",
-                            "messages: [",
-                            "  'Kitties are cute!'",
-                            "  'Got cat?'",
-                            "  'Cat mom.'",
-                            "  'Tuxie crush'",
-                            "  'Lap cat'",
-                            "]",
-                            "index•#: 1 … ∆ Time(2000ms) … index = messages.length() ? 1 index + 1",
-                            "Phrase(messages[index])"
-                        ],
-                        null,
-                        [
-                            "StructureDefinition",
-                            "curious",
-                            "我们要添加一些风格吗？让我们制作另一个短语，就像下面的反射一样，像影子一样。令人印象深刻，对吧？"
-                        ],
-                        [
-                            "edit",
-                            "messages: [",
-                            "  'Kitties are cute!'",
-                            "  'Got cat?'",
-                            "  'Cat mom.'",
-                            "  'Tuxie crush'",
-                            "  'Lap cat'",
-                            "]",
-                            "",
-                            "index•#: 1 … ∆ Time(2000ms) … index = messages.length() ? 1 index + 1",
-                            "",
-                            "Group(Stack('|' 0m) [",
-                            "  Phrase(messages[index])",
-                            "  Phrase(messages[index] resting:Pose(flipy: ⊤ opacity: 25%))",
-                            "])"
-                        ],
-                        null,
-                        [
-                            "StructureDefinition",
-                            "serious",
-                            "现在，所有这些都有效。我们可以把它留在这里。但它也有点难以阅读和理解。部分原因是因为我们重复自己：\\messages[index]\\ 出现两次，每个短语中都有一次。而且 @Reaction 非常长。我们可以做些什么来简化它？这就是我可以帮助的地方。我整理事物，使它们更容易理解，给可重复使用的概念起个名字。所以，想象一下，我们不是用所有这些 @Bind，而是制作了一个 \\Marquee\\？这是我们首先要做的。\\Marquee\\ 的工作是存储消息，还有一个用于进入下一条消息的函数 \\next()\\ 和一个用于获取当前消息的函数 \\now()\\？"
-                        ],
-                        [
-                            "edit",
-                            "•Marquee(messages•[''] index•#: 1) (",
-                            "  ƒ now() messages[index]",
-                            "  ƒ next() Marquee(messages index ≥ messages.length() ? 1 index + 1)",
-                            ")",
-                            "",
-                            "marquee•Marquee: Marquee([",
-                            "  'Kitties are cute!'",
-                            "  'Got cat?'",
-                            "  'Cat mom.'",
-                            "  'Tuxie crush'",
-                            "  'Lap cat'",
-                            "]) … ∆ Time(2000ms) … marquee.next()",
-                            "",
-                            "Group(Stack('|' 0.5m) [",
-                            "  Phrase(marquee.now())",
-                            "  Phrase(marquee.now() resting:Pose(flipy: ⊤ opacity: 25%))",
-                            "])"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "太棒了，@StructureDefinition！但我必须说，这看起来确实是很多额外的工作。为什么要花那么多时间来整理呢？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "serious",
-                            "啊，这实际上与变化有关。现在的代码可能多一些，但如果我们决定以某种方式更改 \\Marquee\\，怎么办？比如说，如果我们想让消息列表每次到达末尾时都反转怎么办？在没有我的旧版本中，这就没那么容易，因为当索引到达末尾时，我们必须反转消息列表。由于 @Bind 一旦设置就无法更改，这将是困难的。但由于我们制作了 \\Marquee\\，更改变得很容易。我们只需在索引到达末尾时更改 \\next\\ 函数，使其制作一个带有反转列表的 \\Marquee\\，否则只需递增。"
-                        ],
-                        [
-                            "edit",
-                            "•Marquee(messages•[“”] index•#: 1) (",
-                            "  ƒ now() messages[index]",
-                            "  ƒ next()",
-                            "    index ≥ messages.length() ?",
-                            "      Marquee(messages.reverse() 1)",
-                            "      Marquee(messages index + 1)",
-                            ")",
-                            "",
-                            "marquee•Marquee: Marquee([",
-                            "  'Kitties are cute!'",
-                            "  'Got cat?'",
-                            "  'Cat mom.'",
-                            "  'Tuxie crush'",
-                            "  'Lap cat'",
-                            "]) … ∆ Time(2000ms) … marquee.next()",
-                            "",
-                            "Group(Stack('|' 0.5m) [",
-                            "  Phrase(marquee.now())",
-                            "  Phrase(marquee.now() resting:Pose(flipy: ⊤ opacity: 25%))",
-                            "])"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "surprised",
-                            "哦，我明白了，通过创建一个@StructureDefinition 来存储值和与之相关的@FunctionDefinition，如果改变主意，那么以后更容易更改事物。"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "happy",
-                            "是的，就像整理房间一样，这样以后找东西就更容易。当然，你不一定非得整理房间才能找到东西，只是会让找东西变得更困难。表演也是一样：如果你投入整理，改变事物就会更容易。"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "那很有道理。我们有点难搞。保持有条理可能是个好主意，特别是当表演变得越来越复杂时。你还有什么想分享的吗？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "eager",
-                            "哦，是的。在@StructureDefinition 中，你不一定非得有@FunctionDefinition。你可以只有值。例如，你可能想把一堆数据放在一个地方。我知道很多导演喜欢制作游戏，把所有的游戏状态都放在@StructureDefinition 中很常见。"
-                        ],
-                        ["edit", "•Game(score•# lives•# level•#)"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "哦，对了！你把数据放进结构中后，要怎么取出来？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "surprised",
-                            "哦天啊，我忘了解释这一点。你需要用一个迷你版的我，@PropertyReference。例如，以游戏为例，看我们是如何定义一个Game @StructureDefinition 的，然后创建一个\\Game\\值，其中\\0\\分，\\3\\命，和第\\1\\级？为了获得命，我们只需说\\status.lives\\，这将计算为\\3\\。"
-                        ],
-                        [
-                            "edit",
-                            "•Game(score•# lives•# level•#)",
-                            "status: Game(0 3 1)",
-                            "status.lives"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "happy",
-                            "好极了！所以只需要一个迷你版的你来获取值而不是你。但是你怎么改变这些值呢？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "serious",
-                            "记得@Bind 只允许你设置一个值，但不能更改它吗？在我所有的@Bind 中也是如此。所以你需要创建一个具有新值的新结构。例如，在这个游戏中，每次ticks变化时，玩家的分数都会增加一分。奇怪的游戏，是吧？所以初始的\\Game\\值是\\Game(0 3 1)\\，然后下一个是\\Game\\的旧值，但分数增加\\1\\。"
-                        ],
-                        [
-                            "edit",
-                            "•Game(score•# lives•# level•#)",
-                            "status: Game(0 3 1) … ∆ Time() … Game(status.score + 1 status.lives status.level)"
-                        ],
-                        null,
-                        [
-                            "StructureDefinition",
-                            "eager",
-                            "如果只有一件事情在改变，重复所有这些旧值可能会很烦人，所以@Bind 和我想出了一个巧妙的小技巧，用一个新值复制@StructureDefinition 值。看看它是不是看起来像一个普通的@Bind？唯一的区别是它在@StructureDefinition 上而不是一个单一的名称上，@StructureDefinition 的每个值都被复制过来，除了被修改的值。"
-                        ],
-                        [
-                            "edit",
-                            "•Game(score•# lives•# level•#)",
-                            "status: Game(0 3 1) … ∆ Time() … status.score: status.score + 1"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Phrase('•' resting:Sequence({0%: Pose(scale: 1) 50%: Pose(scale: 1.2) 100%: Pose(scale: 1)} 3s))"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "happy",
-                            "太棒了！好吧，还有什么吗？"
-                        ],
-                        [
-                            "StructureDefinition",
-                            "curious",
-                            "我想我们唯一缺少的就是灵感了…"
-                        ]
-                    ]
-                },
-                {
-                    "title": "导演笔记",
-                    "subtitle": "解释",
-                    "concept": "Doc",
-                    "performance": ["use", "fit", "Symbol", "¶"],
-                    "lines": [
-                        [
-                            "FunctionDefinition",
-                            "eager",
-                            "哇，我们走了很长的路，不是吗？我们还有一个角色要介绍。它们很有趣，因为本质上，它们主要是解释事物，这感觉就像我和你一起做的事情已经有一段时间了。它们的名字是@Doc。嘿 @Doc，有什么新鲜事吗？"
-                        ],
-                        ["use", "fit", "Symbol", "¶"],
-                        [
-                            "Doc",
-                            "surprised",
-                            "@FunctionDefinition，是你吗？我从没想过会再见到你。你好吗？@Evaluate 怎么样？"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我还好。@Evaluate 是 … @Evaluate。我见到了它们，但…我觉得我还需要一些空间。我一直在向大家介绍我们的新导演。"
-                        ],
-                        [
-                            "Doc",
-                            "kind",
-                            "很高兴见到你！我希望@FunctionDefinition 是一位好老师？"
-                        ],
-                        ["use", "fit", "Symbol", "¶/"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "eager",
-                            "我试过了… 你知道吗，你是我们的最后一站？你非常重要，但同时，在我们解释表演之前有很多要解释的事情。所以我希望你能说最后一句话。你想分享一下你的工作吗？"
-                        ],
-                        ["use", "fit", "Symbol", "¶/en"],
-                        null,
-                        [
-                            "Doc",
-                            "happy",
-                            "当然。如果你已经见过除了我以外的所有人，那么你现在可能已经知道我们做了很多不同的事情。即使是我，有时候也很难追踪每个人在做什么！我所做的就是帮助解释每个人在表演中所做的事情。"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "happy",
-                            "我是一种你可以提醒自己每个人在做什么的方式，同时也是一种向人解释的方式，如果你正在和朋友一起导演，或者想与人分享你的表演。所以你不必非得和我一起工作，但我发现如果你花一些时间解释它是如何工作的，每个表演都会变得更容易做和改变。"
-                        ],
-                        ["use", "fit", "Symbol", "¶About me...¶/en"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "curious",
-                            "那我们的导演怎么和你一起工作？"
-                        ],
-                        [
-                            "Doc",
-                            "serious",
-                            "嗯，你几乎可以把我放在@Program 的任何地方。例如，假设你做了一个@Bind，并且你想说明值是什么。例如，这里我们有一个我们命名的简单值，但我正在提供它角色的更广泛解释。"
-                        ],
-                        [
-                            "conflict",
-                            "¶游戏开始时的价格，",
-                            "用于初始化游戏。¶",
-                            "startingPrice: 5dollar"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "serious",
-                            "或者，假设你在这里有一个@FunctionDefinition 定义了一个在价格上计算税收的方式。你可能想解释它计算了什么。就像在@Bind 中一样，我在@FunctionDefinition 之前出现。"
-                        ],
-                        [
-                            "edit",
-                            "¶给定价格的税收，",
-                            "如果低于100，则为1%，否则为5%¶",
-                            "ƒ tax(price•#dollar) ",
-                            "    price · (price < 100dollar ? 0.01 0.05)"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "serious",
-                            "你在@StructureDefinition 前面也可以这样做，解释它代表什么。这里的解释还能提到它以后可能具有的功能。"
-                        ],
-                        [
-                            "edit",
-                            "¶代表产品及其价格。",
-                            "最终将支持获取有关产品的其他详细信息的功能。¶",
-                            "•Product(name•'' price•#dollar)"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "serious",
-                            "你也可以把我放在任何表达式前面，这在你遇到特别复杂的表达式时尤其有用。"
-                        ],
-                        [
-                            "edit",
-                            "ƒ quadratic(a•# b•# c•# x•#)",
-                            "¶二次方程¶",
-                            "(a · (x ^ 2)) + (b · x) + c"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "excited",
-                            "和@Bind 一样，你可以告诉我解释是什么语言，并为相同的解释提供多个翻译。 （如果选择了西班牙语，你只会看到西班牙语。如果你没有看到，请尝试将西班牙语添加到你选择的语言中。）"
-                        ],
-                        [
-                            "edit",
-                            "ƒ quadratic(a•# b•# c•# x•#)",
-                            "¶二次方程¶/en",
-                            "¶La ecuación cuadrática¶/es",
-                            "(a · (x ^ 2)) + (b · x) + c"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "curious",
-                            "你知道哪是最好的地方放我吗？就在@Program 的最开始。这样每个人都知道你的表演是关于什么的。你甚至可以在弄清楚你想让我们做什么之前就写下它。"
-                        ],
-                        [
-                            "conflict",
-                            "¶你曾经想知道用嘴巴飞✈️是什么感觉吗？",
-                            "也许这存储了飞机的高度？¶",
-                            "•Plane()",
-                            "¶我们需要一些反应来听麦克风…¶",
-                            "sound: 1m",
-                            "¶我们知道有个飞机，但还有什么？¶",
-                            "Phrase(“✈️” sound)"
-                        ],
-                        null,
-                        ["use", "fit", "Symbol", "✈️🫦"],
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "哇，我想用嘴巴驾驶飞机！"
-                        ],
-                        [
-                            "Doc",
-                            "confused",
-                            "@FunctionDefinition，我们没有嘴巴…"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "嗯... 说得好。",
-                            "说到说话，好像你只能包含纯文本。是这样吗？"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "excited",
-                            "哦不，一点都不是。你还记得@Phrase 有很多文本样式的方法吗？我也可以做同样的事情。"
-                        ],
-                        [
-                            "edit",
-                            "¶文档可以是",
-                            "/斜体/，",
-                            "_下划线_，",
-                            "*粗体*，或",
-                            "^特别粗体^。¶",
-                            "'花哨！'"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "excited",
-                            "当然，就像@Text 和@Phrase 一样，如果需要字面上使用这些字符，只需重复两次。"
-                        ],
-                        [
-                            "edit",
-                            "¶",
-                            "文档可以是",
-                            "  /斜体/(//)，",
-                            "  _下划线_ (__)，",
-                            "  *粗体* (**)，或",
-                            "  ^特别粗体^ (^^)。¶",
-                            "'花哨'"
-                        ],
-                        null,
-                        ["Doc", "excited", "你可以在^\\^\\里放示例代码。"],
-                        ["edit", "¶我是文档中的示例： \\1 + 1\\.¶", "1 + 1"],
-                        null,
-                        [
-                            "Doc",
-                            "excited",
-                            "你还可以在文档中添加指向互联网上其他内容的链接。"
-                        ],
-                        [
-                            "edit",
-                            "¶在<Wordplay@https://wordplay.dev>了解更多。¶ '一个链接！'"
-                        ],
-                        null,
-                        [
-                            "Doc",
-                            "serious",
-                            "还有最后一件事。",
-                            "虽然我真的很喜欢解释事情，但有时候省略一些东西也很有帮助。你知道的，暂时从项目中移除一些东西，这样它们就不再是项目的一部分了。",
-                            "你可以通过将任何东西用星号包裹来做到这一点。",
-                            "可以看到我们制作的列表中没有包含\\'cat'\\",
-                            "你可以通过键盘删除星号，或者将光标放在星号内并使用省略命令来移除它们。"
-                        ],
-                        ["edit", "[1 2 3 4 *'cat'* 5 6 7 8]"],
-                        null,
-                        [
-                            "fit",
-                            "Stage([Phrase('Quiet backstage!' color: Color(100% 0 0°))] background: Color(0% 0 0°))"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "哇。我不知道你可以做这么多！谢谢@Doc，我觉得我们可能已经准备好上演了！"
-                        ],
-                        ["Doc", "excited", "让我们开始吧！"]
-                    ]
-                }
+              {
+                "title": "记忆",
+                "subtitle": null,
+                "performance": ["use", "fit", "Symbol", "💭"],
+                "lines": [
+                  ["FunctionDefinition", "curious", "……"],
+                  null,
+                  ["use", "fit", "Symbol", "🤯"],
+                  [
+                    "FunctionDefinition",
+                    "neutral",
+                    "有时候，我只是需要停下来，想一想我们这个小小的社群有多么不可思议。我们每个人都如此不同，单靠其中任何一个人，都没办法完成整场表演。但只要在一起，我们就能创造出令人惊叹的东西！"
+                  ],
+                  null,
+                  ["use", "fit", "Symbol", "🧠"],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "可是不知为什么，无论我们有多么了不起，我们总会忘记这些，然后又一次重复自己。所以，我还想向你介绍另一群伙伴。它们是我们“记住”的方式，也是我们整理记忆的方式。没有它们，我们做过的很多事都得一遍又一遍地重来，那样的话，我们就永远无法上演最精彩的表演了！"
+                  ]
+                ]
+              },
+              {
+                "title": "命名",
+                "subtitle": "联结",
+                "concept": "Bind",
+                "performance": ["use", "fit", "Symbol", ":"],
+                "lines": [
+                  ["fit", "Phrase(':' rotation: 90°)"],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "@Bind？这里有一位朋友，我想介绍给你认识。"
+                  ],
+                  [
+                    "Bind",
+                    "curious",
+                    "@FunctionDefinition？哇，真的是你。已经很久没有声音了。你的朋友是谁？"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Phrase(':' resting:Pose(scale: 10ms ÷ Time()))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "它们是我们的新导演！它们来到这里，是为了用新的想法和新的表达方式启发我们。"
+                  ],
+                  [
+                    "Bind",
+                    "excited",
+                    "真的吗？那太好了。我已经很久没有被激发灵感了。我感觉自己一直都在等待……"
+                  ],
+                  null,
+                  [
+                    "fix",
+                    "Phrase(':' 10m resting:Sequence(bounce(3m) 1s))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "既然你知道了，你现在最想做什么？"
+                  ],
+                  [
+                    "Bind",
+                    "serious",
+                    "给东西命名。给一切命名！给每个人命名。我已经太久没有给什么起名字了。"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "除了我们遇到过的那些角色名字之外，我还没有和我们的灵感伙伴讲过“名字”这件事。你愿意解释一下这里的名字是怎么运作的吗？"
+                  ],
+                  null,
+                  ["use", "fit", "Symbol", ":"],
+                  [
+                    "Bind",
+                    "excited",
+                    "当然！说到名字……你知道每个表达式都会产生一个值，对吧？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我们说过值！像 @Number、@Text、@None、@List、@Set、@Map 这样的值……"
+                  ],
+                  [
+                    "Bind",
+                    "excited",
+                    "对！比如说，当我们造出一个值以后，它就会像球一样被传来传去，从一个表达式传到另一个表达式，直到 @Program 产生最终要交给 @Stage 展示的值。但有时候，比起一直把某个值往下传，更好的办法是先把它放到一边，留给后面的表达式再用。这就是 @Phrase/name 的作用。我会给东西命名，这样我们以后就还能再次用到它们。"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "serious",
+                    "这里有一个最简单的例子。假设我们想给一个数字命名。我们只要写下名字，再写一个 :，然后接上我们想保存的数字。很简单，对吧？从那以后，只要我们在后面的表达式里用到这个名字，它就会求值得到 \\1\\。就像这里，我们先给它命名，然后再通过它的名字把这个值传给 @Program。"
+                  ],
+                  ["edit", "number: 1", "number"],
+                  null,
+                  [
+                    "Bind",
+                    "serious",
+                    "而且，你还可以用 \\•\\ 符号为我指定类型，告诉我这个名字对应的值应该是什么类型。所以，如果你想确保 \\number\\ 一定是个数字，就可以这样写。这就是说：把这个值命名为 \\number\\，而且它必须是一个 @Number。"
+                  ],
+                  ["edit", "number•#: 1", "number"],
+                  null,
+                  [
+                    "Bind",
+                    "eager",
+                    "但如果你给我的不是数字呢？那我就会抱怨，因为你明明说它应该是数字，结果却给了我一段文本。所以我就不知道该怎么办了。明白了吗？"
+                  ],
+                  ["conflict", "number•#: 'oh hi'", "number"],
+                  null,
+                  [
+                    "Bind",
+                    "serious",
+                    "不过说到这里，你大概已经在想：*谁会特地给一个数字或者一段文本命名啊？？？* 好吧，想象一下，你正在监听 @Key，想判断它是不是某一组秘密字母中的一个，然后在舞台上显示一个大大的 \\⊤\\，如果它是“魔法字母”，就显示 \\⊤\\；如果不是，就显示 \\⊥\\。那我们也许会从这里开始。这样一来，结果就会是 \\⊤\\ 或者 \\⊥\\。很棒，对吧？当你按下那些字母中的一个时，你会得到 \\⊤\\；按下别的字母时，就得到 \\⊥\\。很好。"
+                  ],
+                  ["edit", "[ 'a' 'e' 'i' 'o' 'u'].has(Key())"],
+                  null,
+                  [
+                    "Bind",
+                    "serious",
+                    "现在，我们把它做成短语。我们把这个 @List/has 表达式放进文本里，再把它转换成文本。于是，我们就在舞台上得到了一个 @Phrase，比如 \\⊤\\ 或 \\⊥\\。很不错！"
+                  ],
+                  [
+                    "edit",
+                    "Phrase([ 'a' 'e' 'i' 'o' 'u'].has(Key())→'')"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "curious",
+                    "接下来问题来了：我们要怎么改这个 @Phrase 的大小呢？其实，我们已经知道怎么检查它是不是魔法字母了，所以我们完全可以直接把这个表达式再写一遍：如果它是 \\⊤\\，就把大小设成 \\2m\\；如果是 \\⊥\\，就设成 \\1m\\。这样确实能用，但你看到没有？我们不得不把同一个表达式评估两次。"
+                  ],
+                  [
+                    "edit",
+                    "Phrase(",
+                    "   [ 'a' 'e' 'i' 'o' 'u' ].has(Key())→''",
+                    "   [ 'a' 'e' 'i' 'o' 'u' ].has(Key()) ? 2m 1m",
+                    ")"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "excited",
+                    "这时候，就轮到我出场了！你看，你完全可以只评估一次这个表达式，再给它的结果起个名字。是不是很神奇？你只需要把名字和 \\:\\ 放在表达式前面，这个表达式产生的值就有了名字。然后，在它后面的任何地方，你都可以直接用这个名字来引用那个值。很妙吧？想看看它是怎么运作的吗？试着按一下时间轴上的 ←，往回退几步，退到第一次给 \\magic\\ 命名的时候。看看 \\magic\\ 是怎么拿到 \\has\\ 的值的？再看看每一个引用 \\magic\\ 的地方，是不是都拿到了同一个值？"
+                  ],
+                  [
+                    "edit",
+                    "magic: [ 'a' 'e' 'i' 'o' 'u'].has(Key())",
+                    "Phrase(",
+                    "    magic→''",
+                    "    magic ? 2m 1m",
+                    ")"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "serious",
+                    "当然啦，你永远都可以选择直接把那些表达式复制粘贴。可那样做出来的，其实只是同样的表演被重复了好几遍。这很浪费。因为我们得一遍又一遍地产生完全相同的值，而且如果你后来改主意了，就得把所有地方都改一遍。更糟的是，如果你只改了其中一个地方，却忘了改别的地方呢？比如说，你现在还想根据这个结果去改变颜色，那同一个表达式就会出现三次。再想象一下，如果你还想往这个“魔法字母”的列表里再加一个字母，那你就得改三遍！你很可能会漏掉其中一个，或者打错字。如果连我们之中有人都没能按你的想法来表现，那你又该怎么表达你的艺术愿景呢？"
+                  ],
+                  [
+                    "edit",
+                    "Phrase(",
+                    "    [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key())→''",
+                    "    [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key()) ? 2m 1m",
+                    "    color: Color(50% 100 [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key()) ? 180° 0°)",
+                    ")"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "kind",
+                    "可如果你给这个表达式起了名字，那就只需要做一次。你看，这样读起来也清楚多了。"
+                  ],
+                  [
+                    "edit",
+                    "magic: [ 'a' 'e' 'i' 'o' 'u' 'z'].has(Key())",
+                    "Phrase(",
+                    "    magic→''",
+                    "    magic ? 2m 1m",
+                    "    color: Color(50% 100 magic ? 180° 0°)",
+                    ")"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "@Bind，这个例子真棒！你知道我一向很喜欢名字。我有点好奇，名字也会带来问题吗？"
+                  ],
+                  [
+                    "Bind",
+                    "sad",
+                    "会的，确实会有一些问题。比如说，假设我们这样写。看到问题了吗？我已经给你标出来了。这个程序在使用 \\蔬菜\\ 之后才去定义它，这会让我非常困惑。因为程序是按照阅读顺序来执行的，所以当我们读到 \\蔬菜\\ 的时候，就会想：谁是 \\蔬菜\\？结果要等到最后，\\蔬菜\\ 才突然跳出来说“我在这！”然后整场演出就垮掉了。"
+                  ],
+                  [
+                    "conflict",
+                    "水果: 5",
+                    "总计: 水果 + 蔬菜",
+                    "蔬菜: 3",
+                    "总计"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "serious",
+                    "又或者像这个例子，我们给两个不同的值起了同一个名字。我们先把 \\5\\ 命名为 \\水果\\，然后又把 \\10\\ 也命名为 \\水果\\？？可问题是，已经有一个 \\水果\\ 了，所以你到底在说哪一个 \\水果\\？一旦你给一个值起了名字，就不能再用同样的名字去指另一个值了。这个名字和它对应的值，会一直绑定在一起，直到 @Program 完成求值为止。我们可不想让大家连“谁是谁”都分不清。"
+                  ],
+                  [
+                    "conflict",
+                    "水果: 5",
+                    "水果: 10",
+                    "总计: 水果 + 水果",
+                    "总计"
+                  ],
+                  null,
+                  [
+                    "Bind",
+                    "kind",
+                    "最后还有一种情况。假设你写成这样。看到这里发生了什么吗？我们给 \\蔬菜\\ 命了名，可后来根本没有用到它。通常这就是个坏信号，说明你可能漏掉了什么，或者用了错误的名字。再不然，也许你本来就没打算用它——那它为什么还会出现在这里呢？"
+                  ],
+                  ["conflict", "水果: 5", "蔬菜: 10", "水果 + 3"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "neutral",
+                    "这真的太有用了，@Bind，太精彩了。你确定没有别的了吗？"
+                  ],
+                  [
+                    "Bind",
+                    "eager",
+                    "哦！对了，还有一件非常重要的事。一个名字当然很好，对吧？但有时候，多个名字会更好。比如说，如果你想用多种语言给同一个东西命名，这样每个人都能读懂？就好比你想用不同的语言来表示“水果”。",
+                    "把文本光标放到 \\水果\\ 这个名字上。看到没有？里面其实有三个名字，而且每一个后面都带着像 \\/en\\ 这样的两字母标签？如果某个名字属于你没有选中的语言，它就会被隐藏起来。",
+                    "打开 ⚙，比如选择西班牙语，然后你就会看到英文名和西班牙文名。就像这样：一个值，但有三个名字，而你可以用其中任何一个名字来取到这个值。如果你告诉我们你希望使用哪种语言，我们就会尽量展示对应的名字。语言越多越好，因为这个世界上有很多人，都在用很多不同的语言阅读！"
+                  ],
+                  ["conflict", "fruit/en,fruta/es,水果/zh: 5"],
+                  null,
+                  ["use", "fit", "Symbol", ":"],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "你知道吗，@Bind 其实会和很多其他角色一起出现，包括 @Evaluate —— 比如当你给 @FunctionDefinition 输入一个 @Pose (color: _) 的时候，就会看到它们 —— 我们之后还会再遇到更多伙伴。@Bind，你会继续留在这里一起展示吗？"
+                  ],
+                  [
+                    "Bind",
+                    "excited",
+                    "当然会！现在沉默已经被打破了，就让我们整天都来给值命名吧！"
+                  ]
+                ]
+              },
+              {
+                "title": "台下",
+                "subtitle": "块",
+                "concept": "Block",
+                "performance": ["use", "fit", "Symbol", "()"],
+                "lines": [
+                  ["fix", "Phrase('()' 1m)"],
+                  [
+                    "FunctionDefinition",
+                    "neutral",
+                    "还有一个角色其实一直都在，只是你还没真正见过它。它一直躲在一旁……而且它和 @Bind 以及很多其他角色都关系密切，所以我想，接下来我们应该和它聊聊。@Block，你愿意出来吗？"
+                  ],
+                  ["Block", "shy", "……你好。"],
+                  null,
+                  ["fix", "Phrase('()' 2m)"],
+                  ["FunctionDefinition", "kind", "嗨，@Block！你好吗？"],
+                  ["Block", "shy", "……嗯，还可以？"],
+                  null,
+                  ["fix", "Phrase('()' 3m)"],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我有一位新朋友想介绍给你认识。它们很可能会成为我们的下一任导演。"
+                  ],
+                  ["Block", "shy", "……嗨……"],
+                  null,
+                  ["fix", "Phrase('()' 4m)"],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我们刚刚见过 @Bind，不过还没来得及聊聊你们两个为什么会这么要好！"
+                  ],
+                  ["Block", "shy", "……是的，@Bind！"],
+                  null,
+                  ["fix", "Phrase('()' 1m)"],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "你想和大家分享一下，你们平时一起做些什么吗？"
+                  ],
+                  ["Block", "shy", "……你来讲，可以吗？"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "好呀，当然可以！其实 @Program 本身主要就是一个 @Block。它只不过是一个没有括号的 @Block 而已。但你也可以在程序的任何地方使用带括号的 @Block。比如说，你可以用 @Block 来明确数学运算的顺序。这里，@BinaryEvaluate 会先评估 \\1\\，再评估这个 @Block，然后把两者相加。@Block，我说得对吗？"
+                  ],
+                  ["edit", "1 + (2 · 3)"],
+                  ["Block", "shy", "……对的！"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "@Block 还有另一个你其实已经见过的作用。@Block 允许你在里面用 @Bind 给东西命名。但凡是在 @Block 里定义的名字，都只在这对括号里面有效，不会在之前，也不会在之后。例如，看看这个：\\a\\ 被定义为 \\1\\，接着我们开始一个块，在里面把 \\b\\ 定义为 \\2\\，再把 \\c\\ 定义为它们的和。@Block 的结果，就是它内部那串表达式里最后一个值的结果。也就是说，这个 @Block 最终的值就是变量 \\c\\ 的值，而 \\c\\ 的值是 \\3\\。对吧？"
+                  ],
+                  ["conflict", "a: 1", "(", "  b: 2", "  c: a + b", ")"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "serious",
+                    "但如果我们想在 @Block 外面访问 \\c\\ 呢？那就不行了。\\c\\ 只在 @Block 内部定义，在外面是不存在的。@Block，是这样吧？"
+                  ],
+                  [
+                    "conflict",
+                    "a: 1",
+                    "(",
+                    "  b: 2",
+                    "  c: a + b",
+                    ") + c"
+                  ],
+                  [
+                    "Block",
+                    "shy",
+                    "……是的，在我外面，谁也看不到它。\\c\\ 只存在于我的里面。"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "neutral",
+                    "还有一件事，我想也很重要。因为 @Block 本质上是一串表达式，所以它最终只会求值为其中最后一个表达式的结果。也就是说，列表里所有不是 @Bind 的表达式，如果不在最后面，基本上都会被忽略。比如这里，最后一行之前的那些算术运算都不会成为 @Block 的结果。\\3\\、\\5\\、\\7\\ 都不会留下来，@Block 最终只会得到最后那个 \\9\\。我说得对吗，@Block？"
+                  ],
+                  [
+                    "Block",
+                    "shy",
+                    "……嗯。只有最后一个。其他那些……我也不知道它们是来干什么的！！"
+                  ],
+                  [
+                    "conflict",
+                    "(",
+                    "  1 + 2",
+                    "  2 + 3",
+                    "  3 + 4",
+                    "  4 + 5",
+                    ")"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Phrase('()' resting:Sequence(spin() 1s 'straight'))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "还有什么你想和大家分享的吗，@Block？"
+                  ],
+                  [
+                    "Block",
+                    "curious",
+                    "……我们可以做点什么吗？我能帮上忙吗？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我也很好奇！不过我相信，我们的导演会在合适的时候做出决定。灵感总是在最意想不到的时候出现！"
+                  ]
+                ]
+              },
+              {
+                "title": "舞台指示",
+                "subtitle": "函数",
+                "concept": "FunctionDefinition",
+                "performance": ["use", "fit", "Symbol", "ƒ"],
+                "lines": [
+                  ["use", "fit", "Symbol", "☺️"],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "我真高兴我们终于把大家都找回来了，也让你见到了它们。每个人都很不一样，对吧？但也都很有意思，不是吗？我总觉得我们就像一个家庭：每个人都有自己的独特之处，而正是这些差异让我们变得强大。你觉得大家怎么样？"
+                  ],
+                  null,
+                  ["use", "fit", "Symbol", "🙈"],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "我吗？嗯，我其实没什么特别的。我只是喜欢在幕后帮忙，让大家把自己特别的地方展现出来。我想，我甚至都没认真想过要谈谈我自己。不过……我们也可以聊聊我。"
+                  ],
+                  null,
+                  ["use", "fit", "Symbol", "ƒ"],
+                  [
+                    "FunctionDefinition",
+                    "serious",
+                    "那我就从你已经见过的部分开始说吧。你知道每一种值上面，都可以评估不同的函数，对吗？比如数字知道怎么 @Number/add，一个文本值知道怎么用 @Text/has 检查自己是否包含某段文本，或者 @Set 知道怎么判断自己是否包含某个值。嗯，定义这些函数的人，就是我。准确地说，我并不是凭空自己发明它们——那是像你这样的导演才会做的事——但我会定义函数接受什么输入、它们叫什么名字，以及它们怎样利用这些输入，评估出一个输出值。"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "这是一个非常简单的例子。其实，是最简单的那种！它定义了一个永远会评估成数字 \\1\\ 的函数。就这样。它其实没什么用，对吧？它没有名字，不接收输入，而且总是得到 \\1\\。",
+                    "你还可以看到，@Program 这里求值得到的是我的一个实例，也就是一个 @FunctionDefinition。没错，@FunctionDefinition 本身也是值！我也不知道为什么会有人想写出这么没用的函数，但正如我说的，我不负责灵感，那是你的工作。"
+                  ],
+                  ["edit", "ƒ() 1"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "serious",
+                    "这里有一个更实用的例子。你知道奇数和偶数吧？我以前遇到过一位导演，它想检查一个数字是不是偶数——也就是能被 2 整除，我想大概就是这个意思？——于是它写了这个。这个函数叫做 \\even\\，它接收一个单独的数字输入，名字叫 \\number\\。你需要告诉我每个输入应该是什么类型的值，这样 @Evaluate 才能确保，传进函数里的东西类型是对的。接着，这个函数把数字除以 2，取余数（也就是用 @Number/remainder ），然后再用 @Number/equal 检查余数是不是等于 \\0\\。所以，这整个函数最后要么会得到 \\⊤\\，要么会得到 \\⊥\\。比如这里，\\even(3)\\ 的结果就是 \\⊥\\，因为 \\3\\ 是奇数。你可以试着往回退几步，看看它具体是怎么运作的。"
+                  ],
+                  [
+                    "edit",
+                    "ƒ even(number•#) (number % 2) = 0",
+                    "even(3)"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "eager",
+                    "你还可以告诉我，这个函数最终应该评估出什么类型的值。看到输入列表后面加上的 \\•\\ 了吗？那表示“这个函数的表达式应该得到 \\⊤\\ 或 \\⊥\\。”不过，你也看到了，我们这里会报错。因为这个函数实际写出来的结果，并不能保证一定是 \\⊤\\ 或 \\⊥\\，或者说，并不是你声明的那个返回类型，所以表演就会在这里停下来。"
+                  ],
+                  ["conflict", "ƒ even(number•#)•? (number % 2) + 0"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "serious",
+                    "函数可以复杂到你想要的任何程度。你可以用简单的表达式，也可以用 @Block，甚至还能在函数里面再定义函数。比如，看看这位以前的导演写的这个函数。它用 @Block 和很多 @Bind，来计算一个单词里有多少个不同的元音。（我猜它可能是想判断一个单词是不是“复杂”之类的。）你看到它有很多行，对吧？但其实，这仍然只是一个表达式：一个单独的 @Block，而所有那些行都在这个 @Block 里面。和任何 @Block 一样，最后一行决定了它的结果，也就是“不同元音的总数”。至于前面的那些内容——比如第一行，把文本变成字母列表，再把字母列表变成集合——都只是为了给最后的计算做准备。"
+                  ],
+                  [
+                    "edit",
+                    "ƒ vowels(word•'') (",
+                    "  unique: word → [“”] → {}",
+                    "  a: unique{'a'} ? 1 0",
+                    "  e: unique{'e'} ? 1 0",
+                    "  i: unique{'i'} ? 1 0",
+                    "  o: unique{'o'} ? 1 0",
+                    "  u: unique{'u'} ? 1 0",
+                    "  a + e + i + o + u",
+                    ")",
+                    "vowels('hello')"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "serious",
+                    "还有一件事我想展示给你看。我觉得这很重要，因为大家都会对这件事特别兴奋！你知道吗，你不但可以创建一个函数然后再去评估它，因为我定义出来的函数本身也是值，所以你还可以把一个函数当作输入，传给另一个函数。这里有个例子。假设你有一个数字列表，而你只想保留里面的偶数。@List 有一个叫做 @List/filter 的函数，它会接收另一个函数作为输入，然后把这个函数应用到列表里的每个值上，以决定这个值应不应该被保留下来。我们来创建一个数字列表，再把前面定义好的 \\even\\ 函数传给 @List/filter。看看会发生什么？最后我们只会得到偶数。你想不想试着把它改成只得到奇数？也许可以试试修改一下那个函数？"
+                  ],
+                  [
+                    "edit",
+                    "ƒ even(number•#)•? (number % 2) = 0",
+                    "[ 1 2 3 4 5 6 7 8 ].filter(even)"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "有很多函数都可以把其他函数作为输入。@List 有，@Set 有，@Map 也有。甚至，你自己也可以写出这样的函数！"
+                  ],
+                  [
+                    "fit",
+                    "Group(Grid(3 2) [Phrase('翻译') Phrase('过滤') Phrase('组合') Phrase('查找') Phrase('排序') Phrase('直到')])"
+                  ],
+                  null,
+                  ["use", "fit", "DarkVoid"],
+                  [
+                    "FunctionDefinition",
+                    "sad",
+                    "我也不知道。有时候，我明白为什么大家会说，它们非常感激我所做的一切。可有时候，我又觉得，真正的魔力其实来自像你这样的导演。这会让我偶尔觉得，自己好像只是别人光芒之外留下的一层空壳……"
+                  ]
+                ]
+              },
+              {
+                "title": "布景设计",
+                "subtitle": "结构",
+                "concept": "StructureDefinition",
+                "performance": ["use", "fit", "Symbol", "•"],
+                "lines": [
+                  ["use", "fit", "DarkVoid"],
+                  [
+                    "FunctionDefinition",
+                    "sad",
+                    "还有几位角色，我也很想介绍给你认识。接下来这一位，是我见过最复杂的角色之一，也算得上是一位领导者。它帮助整理我们所有人，为表演搭起骨架，让一切都更有秩序。当然，你是我们的导演，但它有点像那个每个人都会去寻求帮助、以维持秩序的存在。我觉得，在你将来创作的任何节目里，它都可能会非常重要。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Phrase('•' resting:Sequence({0%: Pose(scale: 1) 50%: Pose(scale: 1.2) 100%: Pose(scale: 1)} 3s))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "@StructureDefinition，你在吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "curious",
+                    "@FunctionDefinition……朋友。一切都这么安静？大家都去哪儿了？"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "sad",
+                    "是寂静。它影响了我们所有人。大家都还在，我也差不多把所有人都找回来了。但对有些人来说，这段时间真的很难熬。你还好吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "sad",
+                    "……你的朋友是谁？那是个人吗？"
+                  ],
+                  [
+                    "fit",
+                    "Phrase('•' resting:Sequence({0%: Pose(offset: Place(-0.25m)) 50%: Pose(offset: Place(0.25m)) 100%: Pose(offset: Place(-0.25m))} 3s))"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "eager",
+                    "哦，对，抱歉，这是我们的新导演！它们来到这里，是为了激励和引导我们，带来它们的故事、想法和想象。是它们打破了寂静！"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "eager",
+                    "真令人难以置信。也是一种解脱。很高兴见到你，导演。我在这里，随时听候差遣。",
+                    "@FunctionDefinition……这段时间真的很难。你、@Evaluate、每一个人——真的。我以前从没意识到，原来我这么依赖你们：依赖那种有目标的感觉、能玩耍的机会，还有彼此构成的社群。我从没想过我们会失去彼此。没有人需要我去组织时，我只能整理我自己，而那感觉一点意义都没有。"
+                  ],
+                  [
+                    "fit",
+                    "Phrase('•' resting:Sequence({0%: Pose(rotation: 0°) 80%: Pose(rotation: 15°) 100%: Pose(rotation: 0°)} 3s))"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "@StructureDefinition，就算你独自一个人，你也从来不是空无一物的。即使我们不能待在一起，我们也都一直在这里。现在寂静已经被打破了，我们终于可以再次相聚。"
+                  ],
+                  ["StructureDefinition", "happy", "我们可以，是吗？"],
+                  [
+                    "fit",
+                    "Phrase('•' resting:Sequence({0%: Pose(offset: Place(0m 0.25m)) 50%: Pose(offset: Place(0m 0m)) 100%: Pose(offset: Place(0m 0.25m))} 3s))"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "那你觉得呢？你准备好和大家团聚了吗？准备好为我们的新导演献上新的表演了吗？"
+                  ],
+                  ["StructureDefinition", "eager", "我想……是的。"],
+                  [
+                    "fit",
+                    "Phrase('•' resting:Sequence({0%: Pose(offset: Place(0m 0.25m)) 50%: Pose(offset: Place(0m 0m)) 100%: Pose(offset: Place(0m 0.25m))} 1.5s))"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "你觉得，你愿意帮助我们的导演更好地了解你是做什么的吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "shy",
+                    "好。好吧……在寂静中，我有很多时间去思考自己的意义。我想，我最后意识到，我真正做的事，其实是赋予一群事物一个身份。比如说，我知道你已经见过 ƒ 了，可你见过 @Bind 吗？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "见过！我们刚刚才认识了 @Bind 和 @Block。"
+                  ],
+                  [
+                    "fix",
+                    "Phrase('•' entering: Pose(scale: 0.5) resting:Pose(scale: 2))"
+                  ],
+                  null,
+                  [
+                    "StructureDefinition",
+                    "eager",
+                    "那就好。我所做的，就是把值和函数聚在一起，为一组彼此相关的事物创造一个整洁的容器。比如说，想象一下，你想做一个小小的跑马灯，让它循环显示几条消息。以前有位导演就做过一个，它希望这些消息依次显示出来。"
+                  ],
+                  [
+                    "edit",
+                    "[",
+                    "  'Kitties are cute!'",
+                    "  'Got cat?'",
+                    "  'Cat mom.'",
+                    "  'Tuxie crush'",
+                    "  'Lap cat'",
+                    "]"
+                  ],
+                  null,
+                  [
+                    "StructureDefinition",
+                    "serious",
+                    "然后它碰到了一个问题：表演要怎么记住自己现在显示到了哪一条消息？它意识到，自己需要一种办法，在索引走到结尾时还能记住当前的位置。这是个不错的开始，但它现在只能显示第一条消息。"
+                  ],
+                  [
+                    "edit",
+                    "messages: [",
+                    "    'Kitties are cute!'",
+                    "    'Got cat?'",
+                    "    'Cat mom.'",
+                    "    'Tuxie crush'",
+                    "    'Lap cat'",
+                    "  ]",
+                    "index: 1",
+                    "Phrase(messages[index])"
+                  ],
+                  null,
+                  [
+                    "StructureDefinition",
+                    "excited",
+                    "后来，它想到了 @Reaction。@Reaction 可以用来响应流的变化。它希望每过两秒就切换一次消息，于是它做了一个每隔 2 秒跳动一次的 @Time 流，再配合 @Reaction，让索引每次都更新成下一个值。这个 @Reaction 的意思是：从 \\1\\ 开始，然后每当时间每 \\2000ms\\ 变化一次时，就把前一个 \\index\\ 变成新的值；如果已经到达消息列表末尾，就回到 \\1\\，否则就加 \\1\\。这样一来，\\index\\ 就会每两秒增加一次，显示出来的消息也会随之改变。太好了，它成功了！"
+                  ],
+                  [
+                    "edit",
+                    "messages: [",
+                    "  'Kitties are cute!'",
+                    "  'Got cat?'",
+                    "  'Cat mom.'",
+                    "  'Tuxie crush'",
+                    "  'Lap cat'",
+                    "]",
+                    "index•#: 1 … ∆ Time(2000ms) … index = messages.length() ? 1 index + 1",
+                    "Phrase(messages[index])"
+                  ],
+                  null,
+                  [
+                    "StructureDefinition",
+                    "curious",
+                    "要不要再加一点风格？我们来做另一个短语，把它放在下面，像倒影一样、像影子一样。很有感觉，对吧？"
+                  ],
+                  [
+                    "edit",
+                    "messages: [",
+                    "  'Kitties are cute!'",
+                    "  'Got cat?'",
+                    "  'Cat mom.'",
+                    "  'Tuxie crush'",
+                    "  'Lap cat'",
+                    "]",
+                    "",
+                    "index•#: 1 … ∆ Time(2000ms) … index = messages.length() ? 1 index + 1",
+                    "",
+                    "Group(Stack('|' 0m) [",
+                    "  Phrase(messages[index])",
+                    "  Phrase(messages[index] resting:Pose(flipy: ⊤ opacity: 25%))",
+                    "])"
+                  ],
+                  null,
+                  [
+                    "StructureDefinition",
+                    "serious",
+                    "现在，这一切都可以正常工作。我们完全可以就把它写成这样。但它也确实开始变得有点难读、也不太容易理解了。部分原因就在于我们重复了自己：\\messages[index]\\ 写了两次，每个短语里各有一次。而且那个 @Reaction 也非常长。那我们能做点什么，让它更清楚一些呢？这正是我能帮上忙的地方。我会整理事物，让它们更容易被理解，也会为那些可以重复使用的概念起名字。所以，想象一下：与其写这么多 @Bind，不如直接做一个 \\Marquee\\。首先我们定义它。\\Marquee\\ 的工作，就是保存这组消息，同时提供一个前进到下一条消息的函数 \\next()\\，以及一个获取当前消息的函数 \\now()\\。"
+                  ],
+                  [
+                    "edit",
+                    "•Marquee(messages•[''] index•#: 1) (",
+                    "  ƒ now() messages[index]",
+                    "  ƒ next() Marquee(messages index ≥ messages.length() ? 1 index + 1)",
+                    ")",
+                    "",
+                    "marquee•Marquee: Marquee([",
+                    "  'Kitties are cute!'",
+                    "  'Got cat?'",
+                    "  'Cat mom.'",
+                    "  'Tuxie crush'",
+                    "  'Lap cat'",
+                    "]) … ∆ Time(2000ms) … marquee.next()",
+                    "",
+                    "Group(Stack('|' 0.5m) [",
+                    "  Phrase(marquee.now())",
+                    "  Phrase(marquee.now() resting:Pose(flipy: ⊤ opacity: 25%))",
+                    "])"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "太棒了，@StructureDefinition！不过我得说，这看起来确实多了不少额外的工作。为什么要花这么多力气去整理它呢？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "serious",
+                    "啊，这其实是为了应对变化。现在写出来的代码也许会多一点，但如果我们后来想改 \\Marquee\\ 呢？比如说，如果我们希望每当消息列表走到末尾时，就把整个列表反转一次呢？如果还停留在旧的写法里，这件事就没那么容易了，因为当索引走到最后时，我们还得同时反转消息列表。而 @Bind 一旦设定好，就不能再改，所以会很麻烦。但既然我们做了一个 \\Marquee\\，修改起来就容易多了。我们只要改一改 \\next\\ 函数：如果索引已经走到末尾，就返回一个带有反转后列表的新 \\Marquee\\；否则，就只把索引加一。"
+                  ],
+                  [
+                    "edit",
+                    "•Marquee(messages•[“”] index•#: 1) (",
+                    "  ƒ now() messages[index]",
+                    "  ƒ next()",
+                    "    index ≥ messages.length() ?",
+                    "      Marquee(messages.reverse() 1)",
+                    "      Marquee(messages index + 1)",
+                    ")",
+                    "",
+                    "marquee•Marquee: Marquee([",
+                    "  'Kitties are cute!'",
+                    "  'Got cat?'",
+                    "  'Cat mom.'",
+                    "  'Tuxie crush'",
+                    "  'Lap cat'",
+                    "]) … ∆ Time(2000ms) … marquee.next()",
+                    "",
+                    "Group(Stack('|' 0.5m) [",
+                    "  Phrase(marquee.now())",
+                    "  Phrase(marquee.now() resting:Pose(flipy: ⊤ opacity: 25%))",
+                    "])"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "surprised",
+                    "哦，我明白了。通过创建一个 @StructureDefinition，把相关的值和 @FunctionDefinition 收纳在一起，以后如果改主意，修改起来就会容易得多。"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "happy",
+                    "对，就像整理房间一样。不是说你非得把房间整理好，才能找到东西；只是如果不整理，找起来就会更难。表演也是一样：你越早投入心思去整理，后来改变东西就会越轻松。"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "这很有道理。我们确实挺复杂的。保持有条理大概是个好主意，尤其是在表演越来越复杂的时候。你还有什么想分享的吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "eager",
+                    "哦，有的。在 @StructureDefinition 里面，你不一定非得放 @FunctionDefinition。你也可以只放值。比如说，你可能只是想把一组数据放在同一个地方。我知道很多导演都喜欢做游戏，而把整个游戏状态都放进一个 @StructureDefinition 里，是一件很常见的事。"
+                  ],
+                  ["edit", "•Game(score•# lives•# level•#)"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "对哦！那你把数据放进结构里以后，要怎么把它取出来呢？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "surprised",
+                    "哦天哪，我差点忘了解释这个。你需要用一个“迷你版的我”，也就是 @PropertyReference。比如拿这个游戏来说：我们先定义一个叫 \\Game\\ 的 @StructureDefinition，然后创建一个 \\Game\\ 值，它有 \\0\\ 分、\\3\\ 条命、还有第 \\1\\ 关。那如果我们想拿到命数，只要写 \\status.lives\\，它就会评估成 \\3\\。"
+                  ],
+                  [
+                    "edit",
+                    "•Game(score•# lives•# level•#)",
+                    "status: Game(0 3 1)",
+                    "status.lives"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "太好了！所以只要用一个迷你版的你，就能取到值，而不必把整个你都搬出来。那这些值要怎么改呢？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "serious",
+                    "还记得 @Bind 只允许你设定一个值，但不能直接改它吗？在我的内部也一样。所以，如果你想得到更新后的状态，就必须创建一个带有新值的新结构。比如在这个游戏里，每次 tick 变化时，玩家的分数都会加一。挺奇怪的游戏，对吧？所以一开始的 \\Game\\ 值是 \\Game(0 3 1)\\，下一个值则是一个新的 \\Game\\：它沿用原来的生命值和关卡，只把分数加 \\1\\。"
+                  ],
+                  [
+                    "edit",
+                    "•Game(score•# lives•# level•#)",
+                    "status: Game(0 3 1) … ∆ Time() … Game(status.score + 1 status.lives status.level)"
+                  ],
+                  null,
+                  [
+                    "StructureDefinition",
+                    "eager",
+                    "如果每次只有一个地方在变，却还要把所有旧值都重新写一遍，那会很烦。所以 @Bind 和我想出了一个小技巧：你可以在一个新的值里“复制”整个 @StructureDefinition，再只改其中某一个字段。看起来是不是有点像普通的 @Bind？唯一的区别在于，这次不是对单独的名字进行绑定，而是对整个 @StructureDefinition 进行复制。它会把结构里的每个值都原样带过去，只有你指定的那个值会被替换掉。"
+                  ],
+                  [
+                    "edit",
+                    "•Game(score•# lives•# level•#)",
+                    "status: Game(0 3 1) … ∆ Time() … status.score: status.score + 1"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Phrase('•' resting:Sequence({0%: Pose(scale: 1) 50%: Pose(scale: 1.2) 100%: Pose(scale: 1)} 3s))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "太棒了！好吧，还有别的吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "curious",
+                    "我想，我们现在唯一还缺少的，就是灵感了……"
+                  ]
+                ]
+              },
+              {
+                "title": "导演笔记",
+                "subtitle": "解释",
+                "concept": "Doc",
+                "performance": ["use", "fit", "Symbol", "¶"],
+                "lines": [
+                  [
+                    "FunctionDefinition",
+                    "eager",
+                    "哇，我们已经走了很长一段路了，不是吗？现在还剩最后一个角色要介绍给你。它很有意思，因为它的本质几乎就是“解释事情”，而这听起来，和我这段时间陪你做的事还真有点像。它叫 @Doc。嘿，@Doc，最近怎么样？"
+                  ],
+                  ["use", "fit", "Symbol", "¶"],
+                  [
+                    "Doc",
+                    "surprised",
+                    "@FunctionDefinition，是你吗？我从没想过还能再见到你。你还好吗？@Evaluate 呢？"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我还好。@Evaluate 还是……@Evaluate。我的确见到它了，不过……我想我可能还需要一点空间。我这段时间一直在带我们的新导演认识大家。"
+                  ],
+                  [
+                    "Doc",
+                    "kind",
+                    "很高兴见到你！我希望 @FunctionDefinition 是个好老师？"
+                  ],
+                  ["use", "fit", "Symbol", "¶/"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "eager",
+                    "我尽力了……你知道吗？你是我们最后一站。你真的很重要，只不过，在我们开始解释整场表演之前，还有太多事情得先解释清楚。所以我想把最后这一段留给你。你愿意和我们说说，你是做什么的吗？"
+                  ],
+                  ["use", "fit", "Symbol", "¶/en"],
+                  null,
+                  [
+                    "Doc",
+                    "happy",
+                    "当然愿意。如果你已经见过除了我之外的所有人，那你现在大概已经知道，我们每个人都在做很多不同的事。就连我，有时候也很难追上大家到底都在忙什么！而我所做的，就是帮助解释每个人在表演里到底在做些什么。"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "happy",
+                    "我既是一种让你提醒自己“这里到底发生了什么”的方式，也是一种用来向别人说明的方式——比如说，如果你在和朋友一起导演，或者你想把你的表演分享给别人看。所以，你当然不一定非得使用我；但我发现，只要你愿意花一点时间去解释它是怎么运作的，几乎每一场表演都会变得更容易创作，也更容易修改。"
+                  ],
+                  ["use", "fit", "Symbol", "¶About me...¶/en"],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "curious",
+                    "那我们的导演要怎么和你一起工作呢？"
+                  ],
+                  [
+                    "Doc",
+                    "serious",
+                    "嗯，你几乎可以把我放在 @Program 的任何地方。比如说，假设你写了一个 @Bind，而你想说明这个值是干什么的。像这里，我们有一个被命名的简单值，而我就在前面提供一段更完整的解释，说明它扮演什么角色。"
+                  ],
+                  [
+                    "conflict",
+                    "¶游戏开始时的价格，",
+                    "用于初始化游戏。¶",
+                    "startingPrice: 5dollar"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "serious",
+                    "或者说，假设你这里有一个 @FunctionDefinition，用来定义价格该如何计算税费。你可能会想解释一下，它到底计算了什么。和放在 @Bind 前面时一样，我也会出现在 @FunctionDefinition 前面。"
+                  ],
+                  [
+                    "edit",
+                    "¶给定价格所对应的税额，",
+                    "若价格低于100，则税率为1%；否则为5%。¶",
+                    "ƒ tax(price•#dollar) ",
+                    "    price · (price < 100dollar ? 0.01 0.05)"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "serious",
+                    "你也可以把我放在 @StructureDefinition 前面，用来解释这个结构代表什么。这里的说明甚至还可以提到，它未来也许还会具备哪些功能。"
+                  ],
+                  [
+                    "edit",
+                    "¶表示商品及其价格。",
+                    "未来还将支持用于获取商品其他信息的函数。¶",
+                    "•Product(name•'' price•#dollar)"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "serious",
+                    "你还可以把我放在任何表达式前面。尤其是当你碰到一个特别复杂的表达式时，这会非常有帮助。"
+                  ],
+                  [
+                    "edit",
+                    "ƒ quadratic(a•# b•# c•# x•#)",
+                    "¶二次方程¶",
+                    "(a · (x ^ 2)) + (b · x) + c"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "excited",
+                    "而且，就像 @Bind 一样，你也可以告诉我这段解释属于什么语言，并为同一段说明提供多个翻译。（如果你选择了西班牙语，那你就只会看到西班牙语版本。如果你没有看到，请试着把西班牙语加入你的语言选择里。）"
+                  ],
+                  [
+                    "edit",
+                    "ƒ quadratic(a•# b•# c•# x•#)",
+                    "¶二次方程¶/en",
+                    "¶La ecuación cuadrática¶/es",
+                    "(a · (x ^ 2)) + (b · x) + c"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "curious",
+                    "你知道把我放在哪里最好吗？就在 @Program 的最开头。这样一来，每个人一开始就知道你的表演是关于什么的。你甚至可以在自己还没完全想清楚要让我们做什么之前，就先把它写下来。"
+                  ],
+                  [
+                    "conflict",
+                    "¶你有没有想过，用嘴巴开飞机✈️会是什么感觉？",
+                    "也许这里保存的是飞机的高度？¶",
+                    "•Plane()",
+                    "¶我们需要一些反应来监听麦克风……¶",
+                    "sound: 1m",
+                    "¶我们知道这里有一架飞机，但还缺些什么呢？¶",
+                    "Phrase(“✈️” sound)"
+                  ],
+                  null,
+                  ["use", "fit", "Symbol", "✈️🫦"],
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "哇，我想用嘴巴开飞机！"
+                  ],
+                  [
+                    "Doc",
+                    "confused",
+                    "@FunctionDefinition，我们没有嘴巴……"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "嗯……说得也是。",
+                    "说到“说话”，听起来你好像只能写纯文本。是这样吗？"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "excited",
+                    "哦，不，完全不是。你还记得 @Phrase 有很多种设置文本样式的方式吗？我也一样可以。"
+                  ],
+                  [
+                    "edit",
+                    "¶文档可以是",
+                    "/斜体/，",
+                    "_下划线_，",
+                    "*粗体*，或",
+                    "^特别粗体^。¶",
+                    "'花哨！'"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "excited",
+                    "当然，就像 @Text 和 @Phrase 一样，如果你需要把这些字符本身原样写出来，只要重复写两次就可以了。"
+                  ],
+                  [
+                    "edit",
+                    "¶",
+                    "文档可以是",
+                    "  /斜体/(//)，",
+                    "  _下划线_ (__)，",
+                    "  *粗体* (**)，或",
+                    "  ^特别粗体^ (^^)。¶",
+                    "'花哨'"
+                  ],
+                  null,
+                  ["Doc", "excited", "你还可以把示例代码放在 ^\\^\\ 里面。"],
+                  ["edit", "¶我是文档中的示例： \\1 + 1\\.¶", "1 + 1"],
+                  null,
+                  [
+                    "Doc",
+                    "excited",
+                    "你还可以在文档里添加指向互联网上其他内容的链接。"
+                  ],
+                  [
+                    "edit",
+                    "¶在<Wordplay@https://wordplay.dev>了解更多。¶ '一个链接！'"
+                  ],
+                  null,
+                  [
+                    "Doc",
+                    "serious",
+                    "还有最后一件事。",
+                    "虽然我真的很喜欢解释事情，但有时候，把某些东西暂时省略掉，也会很有帮助。你可以暂时把项目中的某一部分拿掉，让它不再属于当前这场表演。",
+                    "你可以用星号把任何内容包起来，来做到这一点。",
+                    "你会看到，我们做出来的列表里并没有包含 \\'cat'\\。",
+                    "你可以直接在键盘上删掉星号，或者把光标放到星号中间，再使用“省略”命令把它们移除。"
+                  ],
+                  ["edit", "[1 2 3 4 *'cat'* 5 6 7 8]"],
+                  null,
+                  [
+                    "fit",
+                    "Stage([Phrase('Quiet backstage!' color: Color(100% 0 0°))] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "哇。我都不知道你原来能做这么多事！谢谢你，@Doc。我觉得，我们可能真的已经准备好上演了！"
+                  ],
+                  ["Doc", "excited", "那就开始吧！"]
+                ]
+              }
             ]
         },
         {
-            "title": "结局",
+            "title": "尾声",
             "performance": [
-                "fit",
-                "Stage([Phrase('😨')] background: Color(0% 0 0°))"
+              "fit",
+              "Stage([Phrase('😨')] background: Color(0% 0 0°))"
             ],
             "scenes": [
-                {
-                    "title": "相互依赖",
-                    "subtitle": null,
-                    "performance": [
-                        "fit",
-                        "Stage([Phrase('😨' resting:Sequence(shake() style: 'straight'))] background: Color(0% 0 0°))"
-                    ],
-                    "lines": [
-                        [
-                            "fit",
-                            "Stage([Phrase('😡')] background: Color(0% 0 0°))"
-                        ],
-                        [
-                            "Evaluate",
-                            "sad",
-                            "@FunctionDefinition，你到哪儿去啦？"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "surprised",
-                            "我一直在带我们的新导演参观…"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Stage([Phrase('😢')] background: Color(0% 0 0°))"
-                        ],
-                        ["Evaluate", "shy", "我没想到你会离开这么久…"],
-                        [
-                            "FunctionDefinition",
-                            "sad",
-                            "… @Evaluate, 我知道你想我。我也想你了。但是，这是件大事：沉默被打破了，我们有了新导演... 我爱你，我知道你需要我，但我还有事情要做。"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Stage([Phrase('😠')] background: Color(0% 0 0°))"
-                        ],
-                        ["Evaluate", "sad", "我们回头再聊。你还有事要做。"],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我觉得我们需要立刻谈谈。我们不能再陷入这个循环。"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Stage([Phrase('😓')] background: Color(0% 0 0°))"
-                        ],
-                        [
-                            "Evaluate",
-                            "curious",
-                            "什么循环？我很爱你！这个怎么能是个循环？"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我创造函数，你来评估它们：这就是我们的方式。但我们之间不能只剩下你需要我。与大家的团聚提醒了我：我们需要空间来做自己，也需要学会爱自己。我无法给你所有你需要的爱，其中一部分必须来自你自己。"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Stage([Phrase('😭')] background: Color(0% 0 0°))"
-                        ],
-                        ["Evaluate", "sad", "你不爱我了吗？"],
-                        [
-                            "FunctionDefinition",
-                            "angry",
-                            "不是，我不是这个意思... 我的意思是在这个感情中，我们两个都重要。我需要说出我的需求，而你也需要说出你的需求，这样我们才能彼此欣赏，接纳真实的自我，作为独立的个体。你需要什么？你最爱自己的什么？"
-                        ],
-                        null,
-                        [
-                            "fit",
-                            "Stage([Phrase('🫠')] background: Color(0% 0 0°))"
-                        ],
-                        ["Evaluate", "shy", "我需要...你。我不需要我自己。"],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我爱你，@Evaluate。但我也需要你去爱你自己。我为我们的世界恢复生机、也为我们能再次在一起而兴奋，但我需要你找到你自己：你的需求、你的意义、你的目标。我不能成为你的目标。"
-                        ],
-                        null,
-                        ["use", "fit", "DarkVoid"],
-                        [
-                            "FunctionDefinition",
-                            "sad",
-                            "我需要点空间。很抱歉，导演之友。也许 @Evaluate 可以在没有我的情况下结束这次的迎接聚会。"
-                        ],
-                        null,
-                        ["Evaluate", "shy", "… Hi."],
-                        null,
-                        [
-                            "Evaluate",
-                            "shy",
-                            "。。。你学到很多东西了嘛？@FunctionDefinition 懂很多。"
-                        ],
-                        null,
-                        [
-                            "Evaluate",
-                            "curious",
-                            "我？我什么都不知道。@FunctionDefinition 需要什么我就给他们什么... 至少我认为我做到了。"
-                        ],
-                        null,
-                        ["fit", "Stage([] background: Color(10% 0 0°))"],
-                        ["List", "kind", "这不是事实，@Evaluate。"],
-                        ["Boolean", "precise", "不对。"],
-                        ["Text", "happy", "一点也不真实！"],
-                        ["Changed", "happy", "超级不真实!"],
-                        [
-                            "Number",
-                            "serious",
-                            "1) 你基本上掌控着我们的表演，2) 如果没有你，@FunctionDefinition 将毫无用处，3) 你确实将事物转变为全新的价值，4) 你以多种不同的形式出现，5) 你给了我们所有人目标，6 ）我们都期待你的指导…"
-                        ],
-                        null,
-                        ["fit", "Stage([] background: Color(20% 0 0°))"],
-                        [
-                            "Phrase",
-                            "kind",
-                            "@Number 说对了 @Evaluate，你在五十个方面都很出色。"
-                        ],
-                        ["Sequence", "happy", "我一看到你就开心旋转！"],
-                        ["Group", "kind", "你的激励使我们走到一起！"],
-                        ["Stage", "serious", "你是我们存在的骨骼"],
-                        ["None", "serious", "。。。"],
-                        ["Program", "kind", "我就是你创造的一切！"],
-                        null,
-                        ["fit", "Stage([] background: Color(40% 0 0°))"],
-                        ["Convert", "kind", "我从你那里学到了一切！"],
-                        [
-                            "StructureDefinition",
-                            "kind",
-                            "如果没有你，我们会陷入混乱。"
-                        ],
-                        [
-                            "Bind",
-                            "happy",
-                            "比如说，如果你没能成功，我会叫什么名字？"
-                        ],
-                        ["Conditional", "curious", "没有你我们怎么办？"],
-                        ["Block", "kind", "... 你是@Evaluate 啊!"],
-                        null,
-                        ["fit", "Stage([] background: Color(50% 0 0°))"],
-                        ["Evaluate", "happy", "…"],
-                        null,
-                        ["fit", "Stage([] background: Color(60% 0 0°))"],
-                        ["Evaluate", "kind", "你们都很友善...我..."],
-                        null,
-                        ["fit", "Stage([] background: Color(70% 0 0°))"],
-                        ["Evaluate", "kind", "我们来跳舞好吗？ 我太想你们了。"],
-                        null,
-                        ["fit", "Stage([] background: Color(80% 0 0°))"],
-                        ["FunctionDefinition", "happy", "我们来跳舞吧！"],
-                        ["Evaluate", "sad", "@FunctionDefinition … 我很..."],
-                        ["FunctionDefinition", "happy", "要不你来带领我们？"],
-                        null,
-                        ["Evaluate", "shy", "…我不行…"],
-                        ["FunctionDefinition", "happy", "你*可以*的。"],
-                        null,
-                        ["fit", "Stage([] background: Color(90% 0 0°))"],
-                        ["Evaluate", "shy", "… 我 … 我来试试."],
-                        null,
-                        ["fit", "Stage([] background: Color(100% 0 0°))"],
-                        [
-                            "Evaluate",
-                            "shy",
-                            "我需要... 我希望我们所有人都能跟着节拍移动。随着节拍倾斜...在黑暗中。 我们可以做到吗？"
-                        ],
-                        null,
-                        ["Program", "happy", "我们能做到！"],
-                        ["Stage", "kind", "先从我开始——"],
-                        ["Evaluate", "kind", "好的，@Stage，你能把舞台调暗吗？"],
-                        ["Stage", "kind", "变暗！"],
-                        ["use", "edit", "EvaluateDance1"],
-                        null,
-                        [
-                            "Evaluate",
-                            "kind",
-                            "@StructureDefinition, 我认为我们需要一种方法来记住我们的位置。你能为我们制作一个结构吗？"
-                        ],
-                        ["StructureDefinition", "curious", "像这样?"],
-                        ["use", "edit", "EvaluateDance2"],
-                        null,
-                        [
-                            "Evaluate",
-                            "kind",
-                            "是的……我也希望我们按照节拍轮换。你能也记得轮换吗？"
-                        ],
-                        ["StructureDefinition", "curious", "这个怎么样？"],
-                        ["use", "edit", "EvaluateDance3"],
-                        null,
-                        [
-                            "Evaluate",
-                            "happy",
-                            "对，就这样。嗯，我们需要上台。 @Text，你介意列出每个人的名单吗？ 我们将把它变成 \\Character>\\。"
-                        ],
-                        ["Text", "excited", "我很荣幸，亲爱的。这样可以吗?"],
-                        ["use", "conflict", "EvaluateDance4"],
-                        null,
-                        [
-                            "Evaluate",
-                            "excited",
-                            "可以的，那太好了！我们现在只需要把它们变成字符即可。@List，我们可以翻译它们吗？@FunctionDefinition，你能帮忙吗？"
-                        ],
-                        ["List", "happy", "翻译, 1, 2, 3! 像这样吗？"],
-                        ["use", "conflict", "EvaluateDance5"],
-                        null,
-                        [
-                            "Evaluate",
-                            "happy",
-                            "很好！ 现在我需要我们上台。 我们可以将这些字符翻译成@Phrase 吗？ 也许在@Free @Group 中？"
-                        ],
-                        ["List", "kind", "再来一次!"],
-                        ["Phrase", "kind", "所有的注意力!"],
-                        ["Group", "kind", "大家快来吧，请各就位..."],
-                        ["use", "edit", "EvaluateDance6"],
-                        null,
-                        [
-                            "Evaluate",
-                            "confused",
-                            "哦……我们到哪了？ 哦！ 我们需要颜色。 @Pose，我们可以变白吗？"
-                        ],
-                        ["use", "edit", "EvaluateDance7"],
-                        null,
-                        [
-                            "Evaluate",
-                            "surprised",
-                            "哎呀，我们都在彼此之上！ 我们需要起点。 让我们利用 @Random。"
-                        ],
-                        ["use", "edit", "EvaluateDance8"],
-                        null,
-                        [
-                            "Evaluate",
-                            "happy",
-                            "耶！ 现在我们只需要移动。 @Reaction，你能给我们一个节奏吗，也许 \\0.75\\ 秒？"
-                        ],
-                        [
-                            "Reaction",
-                            "kind",
-                            "我可以改变它！我们需要一个@Time 流，但我们还需要改变字符。但是下一个值应该是什么？"
-                        ],
-                        ["use", "edit", "EvaluateDance9"],
-                        null,
-                        [
-                            "Evaluate",
-                            "eager",
-                            "我想我们需要某种方式让我们在每个节拍上移动。@StructureDefinition，我们可以制作一个移动函数来选择新的位置和旋转吗？"
-                        ],
-                        ["StructureDefinition", "sad", "我不知道如何制作函数…"],
-                        null,
-                        ["Evaluate", "sad", "…"],
-                        ["FunctionDefinition", "happy", "我能帮忙."],
-                        ["Evaluate", "happy", "…"],
-                        [
-                            "FunctionDefinition",
-                            "happy",
-                            "有时候……我只是需要你知道你有多棒。哪怕这意味着离开。看看你在这里创造了什么…"
-                        ],
-                        [
-                            "Evaluate",
-                            "happy",
-                            "我…我正在创造一些东西。我们正在创造一些东西…但如果没有你，我们就无法创造它。你能帮忙吗？"
-                        ],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "eager",
-                            "当然。一个\\移动\\功能，马上就来了。我来开头，你来收尾…"
-                        ],
-                        ["use", "edit", "EvaluateDance10"],
-                        null,
-                        [
-                            "Evaluate",
-                            "confused",
-                            "谢谢@FunctionDefinition。它们没有移动......哦，对了，\\move\\没有改变任何东西！让我们以当前位置并沿水平和垂直的随机方向移动我们。也许是随机的深度，所以我们 每个人都有机会在前面。然后进行一些随机轮换？"
-                        ],
-                        ["use", "edit", "EvaluateDance11"],
-                        null,
-                        [
-                            "Evaluate",
-                            "confused",
-                            "嗯..还是没有动. 噢! 我们在@Reaction 中没有评估过\\move\\, @List 你可以把每一个 \\Character\\翻译成移动的\\Character\\吗?"
-                        ],
-                        ["List", "excited", "有你的帮忙来翻译!"],
-                        ["use", "edit", "EvaluateDance12"],
-                        null,
-                        [
-                            "Evaluate",
-                            "confused",
-                            "我们太不稳定了。噢，@Phrase，我们忘了设置移动的@Pose 和持续时间。你能不能选择一个比 @Time tick 更小的时间，这样我们就可以移动一下，然后休息一下？"
-                        ],
-                        ["use", "edit", "EvaluateDance13"],
-                        null,
-                        [
-                            "Evaluate",
-                            "excited",
-                            "我们在跳舞! 我们真的在跳舞. 我们做到了!"
-                        ],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我们只是忘记了一个人..."
-                        ],
-                        ["Evaluate", "excited", "谁?"],
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "我们的导演! 你应该和我们一起跳舞."
-                        ],
-                        null,
-                        [
-                            "Evaluate",
-                            "excited",
-                            "噢是的，当然！让它们来做音乐怎么样？@Phrase，你能不能听听 @Volume，然后把它连接到你的颜色中的@Color/lightness 和@Color/chroma？这样，当我们的导演发出声音时，我们会非常兴奋激动！"
-                        ],
-                        ["Phrase", "kind", "好主意!"],
-                        ["use", "edit", "EvaluateDance14"],
-                        null,
-                        ["use", "fix", "EvaluateDance14"],
-                        ["List", "excited", "1, 2, 3, 1, 2, 3"],
-                        ["Boolean", "excited", "行动!"],
-                        ["Text", "excited", "欢欣鼓舞!"],
-                        ["Conditional", "excited", "什么是真正的舞蹈？"],
-                        ["Changed", "excited", "隆，隆，隆。"],
-                        ["Number", "excited", "左五度，向上一米。"],
-                        ["Phrase", "excited", "好神奇!"],
-                        ["Sequence", "excited", "这感觉!"],
-                        ["Group", "excited", "一起来!"],
-                        ["Stage", "excited", "隆 隆 隆"],
-                        ["None", "excited", "…"],
-                        ["StructureDefinition", "excited", "记得行动!"],
-                        ["Bind", "excited", "角色们!"],
-                        null,
-                        [
-                            "FunctionDefinition",
-                            "kind",
-                            "你成功了 @Evaluate! 这就是你的梦想."
-                        ],
-                        [
-                            "Evaluate",
-                            "kind",
-                            "我... 我真的成功了。 但这也是我们一起完成的。"
-                        ],
-                        null,
-                        ["Program", "curious", "是我们自己在表演吗？"],
-                        ["Reaction", "eager", "我想是吧。。。"],
-                        [
-                            "FunctionDefinition",
-                            "serious",
-                            "我们做到了...但如果没有我们新来的导演朋友，这一切都不可能实现。它们打破了我们的沉默；他们提醒了我们，为什么我们作为表达式要在一起。"
-                        ],
-                        null,
-                        ["use", "fit", "Symbol", "?"],
-                        [
-                            "FunctionDefinition",
-                            "excited",
-                            "那么，闪闪发光的新导演，我们该说些什么呢?"
-                        ]
-                    ]
-                }
+              {
+                "title": "共生依赖",
+                "subtitle": null,
+                "performance": [
+                  "fit",
+                  "Stage([Phrase('😨' resting:Sequence(shake() style: 'straight'))] background: Color(0% 0 0°))"
+                ],
+                "lines": [
+                  [
+                    "fit",
+                    "Stage([Phrase('😡')] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "sad",
+                    "@FunctionDefinition，你刚刚去哪儿了？？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "surprised",
+                    "我一直在带我们的新导演四处看看……"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([Phrase('😢')] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "shy",
+                    "我没想到你会去这么久……"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "sad",
+                    "……@Evaluate，我知道你想我了。我也想你了。但这件事很重要：沉默被打破了；我们有了新的导演……我爱你，我知道你需要我，但我也有自己的事要做。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([Phrase('😠')] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "sad",
+                    "这件事我们以后再说吧。你不是还有事要做吗。"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我觉得我们现在就得谈。我们不能再这样一遍遍陷进去。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([Phrase('😓')] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "curious",
+                    "哪样？我爱你啊！这怎么会是个循环？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我定义函数，你来执行它们：这就是我们的相处方式。但我们之间不能只有“你需要我”这一件事。和大家重聚之后，我更清楚地意识到，我们需要空间去做自己，也需要学会爱自己。我没办法给你全部你需要的爱，其中有一部分，得由你自己给自己。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([Phrase('😭')] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "sad",
+                    "你是不爱我了吗？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "angry",
+                    "不，不是这个意思……我的意思是，在这段关系里，我们两个都应该是重要的。我需要说出我的需要，你也需要说出你的需要。这样我们才能以各自真实的样子去爱彼此，把彼此当作独立的个体。那你呢？你需要什么？你喜欢自己什么？"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([Phrase('🫠')] background: Color(0% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "shy",
+                    "我需要……你。我不需要我自己。"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我爱你，@Evaluate。但我也需要你去爱你自己。我很期待我们的世界重新活过来，也期待我们再次在一起会意味着什么，但我需要你找到你自己——你的需要、你的目标、你的意义。我不能成为你活着的全部意义。"
+                  ],
+                  null,
+                  [
+                    "use",
+                    "fit",
+                    "DarkVoid"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "sad",
+                    "我需要一点空间。抱歉了，导演朋友。也许 @Evaluate 可以在没有我的情况下把这场欢迎派对收个尾。"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "shy",
+                    "……嗨。"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "shy",
+                    "……你学到了很多吗？@FunctionDefinition 懂得可多了。"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "curious",
+                    "我吗？我什么都不懂。我只是把 @FunctionDefinition 需要的都给他们……至少，我原本以为是这样。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(10% 0 0°))"
+                  ],
+                  [
+                    "List",
+                    "kind",
+                    "不是这样的，@Evaluate。"
+                  ],
+                  [
+                    "Boolean",
+                    "precise",
+                    "不对。"
+                  ],
+                  [
+                    "Text",
+                    "happy",
+                    "完全不是这么回事！"
+                  ],
+                  [
+                    "Changed",
+                    "happy",
+                    "大错特错！"
+                  ],
+                  [
+                    "Number",
+                    "serious",
+                    "1）我们的演出基本上都是你在掌控；2）没有你，@FunctionDefinition 根本派不上用场；3）你真的会把事物变成全新的值；4）你有那么多不同的形态；5）是你赋予了我们所有人意义；6）我们大家都仰赖你的引导……"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(20% 0 0°))"
+                  ],
+                  [
+                    "Phrase",
+                    "kind",
+                    "@Number 说得对，@Evaluate，你厉害的地方可不止一点点。"
+                  ],
+                  [
+                    "Sequence",
+                    "happy",
+                    "我一见到你就忍不住转起来！"
+                  ],
+                  [
+                    "Group",
+                    "kind",
+                    "是你激励我把大家聚在一起！"
+                  ],
+                  [
+                    "Stage",
+                    "serious",
+                    "你就是我们存在的骨架"
+                  ],
+                  [
+                    "None",
+                    "serious",
+                    "……"
+                  ],
+                  [
+                    "Program",
+                    "kind",
+                    "你让我成为什么，我就成为什么！"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(40% 0 0°))"
+                  ],
+                  [
+                    "Convert",
+                    "kind",
+                    "我从你身上学会了一切！"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "kind",
+                    "没有你，我们早就乱成一团了。"
+                  ],
+                  [
+                    "Bind",
+                    "happy",
+                    "比如，要不是你把它做出来，我还能给什么命名呀？"
+                  ],
+                  [
+                    "Conditional",
+                    "curious",
+                    "没有你，我们还能做成什么事呢？"
+                  ],
+                  [
+                    "Block",
+                    "kind",
+                    "……你可是 @Evaluate 啊！"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(50% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "happy",
+                    "……"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(60% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "kind",
+                    "你们都太好了……我……"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(70% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "kind",
+                    "我们可以跳舞吗？我真的好想你们。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(80% 0 0°))"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "来跳吧。"
+                  ],
+                  [
+                    "Evaluate",
+                    "sad",
+                    "@FunctionDefinition……我真的……"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "不如你来带我们跳？"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "shy",
+                    "……我不行……"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "你可以的。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(90% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "shy",
+                    "……我……我试试。"
+                  ],
+                  null,
+                  [
+                    "fit",
+                    "Stage([] background: Color(100% 0 0°))"
+                  ],
+                  [
+                    "Evaluate",
+                    "shy",
+                    "我想……我想让我们大家都跟着节拍 움직起来。随着节拍倾斜……在黑暗里。我们能做到吗？"
+                  ],
+                  null,
+                  [
+                    "Program",
+                    "happy",
+                    "我们能做到！"
+                  ],
+                  [
+                    "Stage",
+                    "kind",
+                    "先从我开始——"
+                  ],
+                  [
+                    "Evaluate",
+                    "kind",
+                    "好，@Stage，你能把舞台变暗吗？"
+                  ],
+                  [
+                    "Stage",
+                    "kind",
+                    "变暗！"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance1"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "kind",
+                    "@StructureDefinition，我觉得我们需要一种方式记住各自的位置。你能帮我们做一个结构吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "curious",
+                    "像这样？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance2"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "kind",
+                    "对……我还想让我们随着节拍旋转。你也能把旋转记进去吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "curious",
+                    "那这样呢？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance3"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "happy",
+                    "对，就是这样。嗯……哦，我们还得上台。@Text，你可以把大家列成一个名单吗？我们会把它变成 \\Character>。"
+                  ],
+                  [
+                    "Text",
+                    "excited",
+                    "我的荣幸，亲爱的。这样可以吗？"
+                  ],
+                  [
+                    "use",
+                    "conflict",
+                    "EvaluateDance4"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "excited",
+                    "可以，太好了！现在只要把它们变成角色就行。@List，我们可以把它们翻译出来吗？@FunctionDefinition，你愿意帮忙吗？"
+                  ],
+                  [
+                    "List",
+                    "happy",
+                    "翻译，1、2、3！像这样吗？"
+                  ],
+                  [
+                    "use",
+                    "conflict",
+                    "EvaluateDance5"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "happy",
+                    "太好了！接下来，我们得把大家放上舞台。我们能把这些角色翻译成 @Phrase 吗？也许放进一个 @Free 的 @Group 里？"
+                  ],
+                  [
+                    "List",
+                    "kind",
+                    "再来一次！"
+                  ],
+                  [
+                    "Phrase",
+                    "kind",
+                    "所有注意力就位！"
+                  ],
+                  [
+                    "Group",
+                    "kind",
+                    "大家来吧，各就各位……"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance6"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "confused",
+                    "咦……我们在哪？哦！我们还需要颜色。@Pose，我们能变成白色吗？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance7"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "surprised",
+                    "哎呀，我们全都叠在一起了！我们需要起始位置。要不借助一下 @Random？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance8"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "happy",
+                    "耶！现在我们只差动起来了。@Reaction，你能给我们一个节拍吗？比如每 \\0.75\\ 秒一次？"
+                  ],
+                  [
+                    "Reaction",
+                    "kind",
+                    "我可以让它变化！我们需要一个 @Time 流，但我们也得让角色发生变化。那下一个值应该是什么呢？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance9"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "eager",
+                    "我想，我们需要一种方式让自己在每个节拍上移动。@StructureDefinition，我们能做一个 move 函数，让它选出新的位置和旋转吗？"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "sad",
+                    "我不会定义函数……"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "sad",
+                    "……"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "我可以帮忙。"
+                  ],
+                  [
+                    "Evaluate",
+                    "happy",
+                    "……"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "happy",
+                    "有时候……我只是想让你知道，你有多么了不起。有时候，这意味着我要先离开一下。看看你现在创造出来的这些……"
+                  ],
+                  [
+                    "Evaluate",
+                    "happy",
+                    "我……我真的在创造些什么。是我们在一起创造些什么……但没有你，我们做不出来。你愿意帮我吗？"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "eager",
+                    "当然。一个 \\move\\ 函数，这就来。我先起个头，剩下的你来完成……"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance10"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "confused",
+                    "谢谢你，@FunctionDefinition。它们怎么还是没动……哦，对，\\move\\ 其实什么都没改！我们来根据当前位置，随机朝水平和垂直方向移动一下吧。也许再加一个随机深度，这样大家都有机会站到前面来。再来点随机旋转？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance11"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "confused",
+                    "嗯……还是没动。哦！我们还没有在 @Reaction 里执行 \\move\\。@List，你能把每一个 \\Character\\ 都翻译成“移动后的” \\Character\\ 吗？"
+                  ],
+                  [
+                    "List",
+                    "excited",
+                    "有你帮忙，翻译当然可以！"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance12"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "confused",
+                    "动作也太一卡一卡了。哦，@Phrase，我们忘了给移动设置 @Pose 和持续时间。你能不能选一个比 @Time 的节拍更短的时长，这样我们动一下，再稍微停一下？"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance13"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "excited",
+                    "我们在跳舞了！我们真的在跳舞！我们做到了！"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "不过我们还漏了一个人……"
+                  ],
+                  [
+                    "Evaluate",
+                    "excited",
+                    "谁？"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "我们的导演呀！他们也应该和我们一起跳。"
+                  ],
+                  null,
+                  [
+                    "Evaluate",
+                    "excited",
+                    "哦对，当然！不如让他们来做音乐吧？@Phrase，你能听一听 @Volume，然后把它接到你颜色里的 @Color/lightness 和 @Color/chroma 上吗？这样一来，当我们的导演发出声音时，我们就会亮得像烧白了一样！"
+                  ],
+                  [
+                    "Phrase",
+                    "kind",
+                    "这主意太棒了！"
+                  ],
+                  [
+                    "use",
+                    "edit",
+                    "EvaluateDance14"
+                  ],
+                  null,
+                  [
+                    "use",
+                    "fix",
+                    "EvaluateDance14"
+                  ],
+                  [
+                    "List",
+                    "excited",
+                    "1，2，3，1，2，3"
+                  ],
+                  [
+                    "Boolean",
+                    "excited",
+                    "动起来！"
+                  ],
+                  [
+                    "Text",
+                    "excited",
+                    "太快乐了！"
+                  ],
+                  [
+                    "Conditional",
+                    "excited",
+                    "跳舞到底是什么呢？"
+                  ],
+                  [
+                    "Changed",
+                    "excited",
+                    "咚，咚，咚。"
+                  ],
+                  [
+                    "Number",
+                    "excited",
+                    "向左五度，向上一米。"
+                  ],
+                  [
+                    "Phrase",
+                    "excited",
+                    "太奇妙了！"
+                  ],
+                  [
+                    "Sequence",
+                    "excited",
+                    "这种感觉！"
+                  ],
+                  [
+                    "Group",
+                    "excited",
+                    "大家一起！"
+                  ],
+                  [
+                    "Stage",
+                    "excited",
+                    "咚 咚 咚"
+                  ],
+                  [
+                    "None",
+                    "excited",
+                    "……"
+                  ],
+                  [
+                    "StructureDefinition",
+                    "excited",
+                    "记得动起来！"
+                  ],
+                  [
+                    "Bind",
+                    "excited",
+                    "角色们！"
+                  ],
+                  null,
+                  [
+                    "FunctionDefinition",
+                    "kind",
+                    "你做到了，@Evaluate！这就是你的愿景。"
+                  ],
+                  [
+                    "Evaluate",
+                    "kind",
+                    "我……我确实做到了。但这也是我们一起完成的。"
+                  ],
+                  null,
+                  [
+                    "Program",
+                    "curious",
+                    "所以我们刚才……是在表演我们自己的演出吗？"
+                  ],
+                  [
+                    "Reaction",
+                    "eager",
+                    "我想……是的。"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "serious",
+                    "是的……但如果没有我们这位新来的导演朋友，我们不可能做到。他们打破了我们的沉默；也提醒了我们，为什么我们会作为表达式，一起存在于这里。"
+                  ],
+                  null,
+                  [
+                    "use",
+                    "fit",
+                    "Symbol",
+                    "?"
+                  ],
+                  [
+                    "FunctionDefinition",
+                    "excited",
+                    "那么，闪闪发亮的新导演，我们该说些什么呢？"
+                  ]
+                ]
+              }
             ]
-        }
+          }
     ]
 }
